@@ -1,0 +1,79 @@
+
+aside {
+  min-height: 100vh;
+  color: white;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgb(45, 45, 45);
+  width: 0;
+  pointer-events: auto; 
+}
+
+aside.open {
+  width: 350px;
+}
+
+aside.closed {
+  width: 0;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0 36px; 
+}
+
+h4 {
+  font-size: 22px;
+  margin: 0 36px; 
+}
+
+
+ul {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.link {
+  padding: 12px;
+  margin: 0 24px; 
+  cursor: pointer;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(200, 133, 161);
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.hover-underline-animation.left::after {
+  transform-origin: bottom right;
+}
+
+.hover-underline-animation.left:hover::after {
+  transform-origin: bottom left;
+}
