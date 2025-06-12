@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-
+import "./PopUp.css"
 type PopupProps = {
   name: string;
   position: { top: string; left: string };
@@ -26,18 +26,10 @@ export default function Popup({ name, position, onClose }: PopupProps) {
     <div
       ref={ref}
       style={{
-        fontSize: "20px",
-        position: "absolute",
-        top: position.top,
-        left: position.left,
-        
-        // transform: 'translate(-50%, -100%)',
-        background: "#ffffff90",
-        padding: "24px",
-        borderRadius: "12px",
-        border: "2px solid white",
-        pointerEvents: "auto", // important to allow click detection
-      }}
+          top: position.top,
+          left: position.left
+        }}
+      className="popup"
     >
       <strong>Part:</strong> {name}
     </div>

@@ -13,8 +13,7 @@ export default function Model(props) {
   
   return (
     <group {...props}  rotation={[0, Math.PI, 0]} dispose={null}>
-      <OrthographicCamera makeDefault={props.activeCam === 0} zoom={85} far={1000} near={0.1} position={[-1.699, 10.565, -11.704]} rotation={[-2.944, -0.173, -3.107]} />
-      <PerspectiveCamera makeDefault={props.activeCam === 1} far={1000} near={0.1} fov={51.631} position={[-8.521, 6.045, -1.489]} rotation={[-3.132, -0.645, -3.136]} scale={7.983} />
+      <OrthographicCamera makeDefault={true} zoom={75} far={1000} near={0.1} position={[-1.699, 10.565, -11.704]} rotation={[-2.944, -0.173, -3.107]} />
       <mesh onClick={()=>props.handlePartClick('monitor')} geometry={nodes.monitor.geometry} material={materials['monitor-material']} position={[-0.86, 6.013, 6.498]} scale={[1.56, 1.024, 0.16]} />
       <mesh onClick={()=>props.handlePartClick('white-board')} geometry={nodes.Cube001.geometry} material={materials['white-board-material']} position={[-3.85, 9.001, 7.148]} scale={[1.635, 2.379, 0.065]} />
       <mesh geometry={nodes.Blinds.geometry} material={materials['blinds-material']} position={[1.969, 10.709, 6.972]} rotation={[0.005, -0.001, -0.002]} scale={[3.455, 0.494, 0.137]} />
