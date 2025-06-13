@@ -1,6 +1,6 @@
   export const education = [
     {
-      src: "/sjsu.png",
+      src: "/sjsu.svg",
       width: 60,
       height: 60,
       alt: "ucsc",
@@ -10,7 +10,7 @@
     },
 
     {
-      src: "/ucsc-logo.jpeg",
+      src: "/ucsc.svg",
       width: 60,
       height: 60,
       alt: "ucsc",
@@ -41,15 +41,15 @@
 
 export const projects = [
      {
-      src: "/ucsc-logo.jpeg",
+      src: "/zen-tank.svg",
       alt: "zen-tank",
       title: "Zen Tank",
-      description: "A React Native app to plan your next AquaScape!",
+      description: "A React Native app to plan your next Fish Tank Ecosystem!",
       path: "/projects/zen-tank",
       date: "November 2024 - February 2025"
     },
      {
-      src: "/ucsc-logo.jpeg",
+      src: "/tarot-ai.svg",
       alt: "tarot-ai",
       title: "Tarot AI",
       description: "An image detection app that determines the type of tarot card pictured",
@@ -57,7 +57,7 @@ export const projects = [
       date: "February 2025 - April 2025"
     },
      {
-      src: "/ucsc-logo.jpeg",
+      src: "/portfolio-3d.svg",
       alt: "3d-portfolio",
       title: "My Portfolio",
       description: "My responsive React Three.js Web App that lets the world know about me :)",
@@ -76,7 +76,7 @@ export const career = [
       date: "June 2025 - Present"
     },
      {
-      src: "/ucsc-logo.jpeg",
+      src: "/cisco-logo.svg",
       alt: "cisco",
       title: "UX Engineer",
       description: "Cisco Systems Inc.",
@@ -85,7 +85,7 @@ export const career = [
     },
      
      {
-      src: "/ucsc-logo.jpeg",
+      src: "/houseme-logo.svg",
       alt: "3d-portfolio",
       title: "CEO, Co-Founder",
       description: "HouseMe Networks LLC (My Startup)",

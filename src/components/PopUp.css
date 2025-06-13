@@ -27,8 +27,18 @@
   }
 }
 
+@keyframes expand-width-400-r {
+   0% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+}
 
-@keyframes expand-width-400 {
+@keyframes expand-width-400-l {
    0% {
     transform: scaleX(0);
     transform-origin: left;
@@ -61,9 +71,14 @@
   }
 }
 
-.popup-400 {
+.popup-400-l {
     width: 400px;
-  animation: expand-width-400 0.3s ease-out;
+  animation: expand-width-400-l 0.3s ease-out;
+}
+
+.popup-400-r {
+  width: 400px;
+  animation: expand-width-400-r 0.3s ease-out;
 }
 
 .popup-250-h {
@@ -212,15 +227,22 @@ p {
 /** Education Popup */
 ul {
     list-style: none;
-    padding: 0;
+    padding: 0 0 0 24px;
     margin: 0;
 }
 
 li {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.clickable-li {
+  
+   &:hover {
+      background-color: rgb(254, 150, 137, .2);
+  }
 }
 
 
@@ -252,4 +274,8 @@ li:last-child {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.next-link {
+  text-decoration: none;
 }

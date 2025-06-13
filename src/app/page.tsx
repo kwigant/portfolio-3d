@@ -20,9 +20,9 @@ const Home: React.FC = () => {
             name={"Career"}
             position={{
               top: "35%",
-              left: "3%",
+              left: "4%",
               width: "400px",
-              height: "300px",
+              height: "325px",
             }}
             onClose={() => setTab(-1)}
           />
@@ -66,10 +66,10 @@ const Home: React.FC = () => {
         {tab === 3 && (
           <Popup
             position={{
-              top: "30%",
+              top: "27%",
               left: "65%",
               width: "400px",
-              height: "425px",
+              height: "450px",
             }}
             name={"Projects"}
             onClose={() => setTab(-1)}

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./PopUp.css";
 import Image from "next/image";
 import { career, education, projects, tech } from "@/constants/popup-data";
+import Link from "next/link";
 
 type PopupProps = {
   name: string;
@@ -24,7 +25,7 @@ export default function Popup({ name, position, onClose }: PopupProps) {
     document.addEventListener("mousedown", handleClickOutside);
     if (ref && ref.current && ref.current?.clientWidth > 40) {
       // Wait for the transition to complete (e.g., 300ms)
-      const timer = setTimeout(() => setShowContent(true), position.width !== '850px' ? 200 : 300);
+      const timer = setTimeout(() => setShowContent(true), 300);
       return () => clearTimeout(timer);
     } else {
       // Reset content visibility when popup is hidden
@@ -39,7 +40,8 @@ export default function Popup({ name, position, onClose }: PopupProps) {
     switch(position.width) {
       case '400px': 
         if (position.height === '250px') return 'popup-250-h'
-        return 'popup-400';
+        if (position.height === '450px') return 'popup-400-r';
+        return 'popup-400-l';
       case '850px': return 'popup-850';
       case '500px': return 'popup-500';
     }
@@ -113,14 +115,16 @@ export default function Popup({ name, position, onClose }: PopupProps) {
               <ul>
                 {projects.map((p, i) => {
                   return (
-                    <li key={i}>
-                      <Image width={60} height={60} src={p.src} alt={p.alt} />
+                    <Link className="next-link" href={p.path} key={i}>
+                    <li className="clickable-li">
+                      <Image width={80} height={80} src={p.src} alt={p.alt} />
                       <div className="column">
                         <p className="degree">{p.title}</p>
                         <p className="school">{p.description}</p>
                         <p className="date">{p.date}</p>
                       </div>
                     </li>
+                    </Link>
                   );
                 })}
               </ul>
