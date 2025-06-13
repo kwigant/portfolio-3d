@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 header {
       /* font-family: "Montserrat", sans-serif; */
- font-family: "Funnel Display", sans-serif;
+    font-family: "Funnel Display", sans-serif;
     display: flex;
     color: #3c383b;
     flex-direction: row;
@@ -46,6 +46,7 @@ header {
 
 .link-active {
     font-weight: bold !important;
+    color: rgb(254, 150, 137) !important; 
 }
 
 .hover-underline-animation {

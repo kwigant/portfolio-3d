@@ -1,9 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
+/** General Popup Styles*/
+
 .popup {
+    font-family: "Funnel Display", sans-serif;
     font-size: 20px;
     position: absolute;
-    background: #ffffff90;
+    background: #ffffff;
     padding: 24px;
     border-radius: 12px;
     border: 2px solid white;
-    pointer-events: auto
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes expand-height-250 {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+
+@keyframes expand-width-400 {
+   0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@keyframes expand-width-850 {
+  0% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}
+
+@keyframes expand-width-500 {
+  0% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+}
+
+.popup-400 {
+    width: 400px;
+  animation: expand-width-400 0.3s ease-out;
+}
+
+.popup-250-h {
+    width: 250px;
+  animation: expand-height-250 0.3s ease-out;
+}
+
+.popup-850 {
+    width: 850px;
+  animation: expand-width-850 0.3s forwards;
+}
+
+.popup-500 {
+    width: 500px;
+  animation: expand-width-500 0.3s ease-out;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column:first-child {
+    padding: 0 24px;
+}
+
+.column:last-child {
+    padding: 0 24px;
+}
+
+.justified-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 24px;
+    width: 100%;
+}
+
+/** Contact Popup */
+
+input, textarea {
+    font-family: "Funnel Display", sans-serif;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid rgb(212, 212, 212) ;
+    width: 450px;
+}
+
+input {
+    height: 40px;
+    margin-bottom: 12px;
+    padding: 4px 12px;
+    &:hover{
+        border-bottom: 2px solid rgb(254, 150, 137);
+    }
+    &:disabled&:hover {
+        border-bottom: 2px solid rgb(212, 212, 212) ;
+    }
+    &:focus {
+        border-radius: 8px;
+        outline: none !important;
+        border:2px solid rgb(254, 150, 137);
+        box-shadow: 0 0 10px #c7c7c7;
+    }
+}
+
+textarea {
+    height: 88px;
+    padding: 12px;
+     &:hover{
+        border-bottom: 2px solid rgb(254, 150, 137);
+    }
+
+    &:focus {
+        border-radius: 8px;
+        outline: none !important;
+        border:2px solid rgb(254, 150, 137);
+        box-shadow: 0 0 10px #c7c7c7;
+    }
+} 
+
+h2 {
+    color: #3c383b;
+    margin: 0;
+    text-align: center; 
+    margin-bottom: 12px;
+}
+
+p {
+    color: #3c383b;
+    font-size: 16px;
+    width: 300px;
+    font-weight: 100;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: gray;
+    margin-bottom: 12px;
+}
+
+.end-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.send-btn {
+    font-family: "Funnel Display", sans-serif;
+    background-color: rgb(254, 150, 137);
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 8px 16px;
+}
+
+.cancel-btn {
+    background-color: white;
+    border: 2px solid rgb(254, 150, 137);
+    border-radius: 8px;
+    font-family: "Funnel Display", sans-serif;
+    color: rgb(254, 150, 137);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 4px 12px;
+    cursor: pointer;
+    margin-top: 24px;
+
+    &:hover {
+        color: white;
+        background: rgb(254, 150, 137);
+    }
+}
+/** Education Popup */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+.degree {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.school {
+    margin: 0;
+    font-size: 16px;
+}
+
+.date {
+    margin: 4px 0;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 100;
+    color: gray;
+}
+
+/** Tech Popup */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }

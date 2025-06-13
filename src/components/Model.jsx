@@ -14,13 +14,13 @@ export default function Model(props) {
   return (
     <group {...props}  rotation={[0, Math.PI, 0]} dispose={null}>
       <OrthographicCamera makeDefault={true} zoom={75} far={1000} near={0.1} position={[-1.699, 10.565, -11.704]} rotation={[-2.944, -0.173, -3.107]} />
-      <mesh onClick={()=>props.handlePartClick('monitor')} geometry={nodes.monitor.geometry} material={materials['monitor-material']} position={[-0.86, 6.013, 6.498]} scale={[1.56, 1.024, 0.16]} />
-      <mesh onClick={()=>props.handlePartClick('white-board')} geometry={nodes.Cube001.geometry} material={materials['white-board-material']} position={[-3.85, 9.001, 7.148]} scale={[1.635, 2.379, 0.065]} />
+      <mesh geometry={nodes.monitor.geometry} material={materials['monitor-material']} position={[-0.86, 6.013, 6.498]} scale={[1.56, 1.024, 0.16]} />
+      <mesh geometry={nodes.Cube001.geometry} material={materials['white-board-material']} position={[-3.85, 9.001, 7.148]} scale={[1.635, 2.379, 0.065]} />
       <mesh geometry={nodes.Blinds.geometry} material={materials['blinds-material']} position={[1.969, 10.709, 6.972]} rotation={[0.005, -0.001, -0.002]} scale={[3.455, 0.494, 0.137]} />
       <mesh geometry={nodes.Sphere006.geometry} material={materials['cat-body']} position={[4.402, 6.726, 7.701]} rotation={[0, 0, 0.387]} scale={[0.922, 0.686, 0.615]} />
       <mesh geometry={nodes.BézierCurve.geometry} material={materials['cat-tail']} position={[4.603, 6.243, 7.412]} rotation={[0, 0, 0.053]} scale={0.644} />
       <mesh geometry={nodes.Cube002.geometry} material={materials['wall-material']} position={[-2.05, 9.767, 2.391]} scale={[11.23, 9.087, 4.841]} />
-      <mesh geometry={nodes.record.geometry} onClick={()=>props.handlePartClick('record')} material={materials['Material.002']} position={[6.458, 7.143, 5.467]} rotation={[0, 0.629, 0]} scale={[0.057, 0.031, 0.115]} />
+      <mesh geometry={nodes.record.geometry} material={materials['Material.002']} position={[6.458, 7.143, 5.467]} rotation={[0, 0.629, 0]} scale={[0.057, 0.031, 0.115]} />
       <mesh geometry={nodes['cat-head002'].geometry} material={materials['cat-eyes']} position={[3.254, 6.918, 7.473]} rotation={[0.052, -0.778, 0.502]} scale={[-0.127, -0.155, -0.137]} />
       <group position={[8.509, 4.337, 5.722]} rotation={[Math.PI / 2, 0, -0.896]} scale={[0.359, 0.358, 0.463]}>
         <mesh geometry={nodes.Plane003.geometry} material={materials['cactus-pot-material']} />
@@ -48,7 +48,7 @@ export default function Model(props) {
       <mesh geometry={nodes['filing-cabinet020'].geometry} material={nodes['filing-cabinet020'].material} position={[8.336, 4.337, 5.722]} rotation={[Math.PI / 2, 0, -0.896]} scale={[0.359, 0.358, 0.463]} />
       <group position={[8.509, 4.337, 5.722]} rotation={[Math.PI / 2, 0, -0.896]} scale={[0.359, 0.358, 0.463]}>
         <mesh geometry={nodes.Plane032.geometry} material={materials['college-banner-material']} />
-        <mesh onClick={()=>props.handlePartClick('diploma')} geometry={nodes.Plane032_1.geometry} material={materials['diploma-material']} />
+        <mesh  geometry={nodes.Plane032_1.geometry} material={materials['diploma-material']} />
       </group>
       <group position={[2.179, 4.865, 5.151]} rotation={[2.977, 0, -Math.PI]} scale={[-1.035, -0.037, -0.382]}>
         <mesh geometry={nodes.Cube2257.geometry} material={materials['desktop-material']} />
