@@ -137,6 +137,8 @@ input {
     height: 40px;
     margin-bottom: 12px;
     padding: 4px 12px;
+    font-family: "Funnel Display", sans-serif;
+
     &:hover{
         border-bottom: 2px solid rgb(254, 150, 137);
     }
@@ -154,6 +156,8 @@ input {
 textarea {
     height: 88px;
     padding: 12px;
+    font-family: "Funnel Display", sans-serif;
+
      &:hover{
         border-bottom: 2px solid rgb(254, 150, 137);
     }
@@ -167,6 +171,7 @@ textarea {
 } 
 
 h2 {
+    font-family: "Funnel Display", sans-serif;
     color: #3c383b;
     margin: 0;
     text-align: center; 
@@ -175,6 +180,7 @@ h2 {
 
 p {
     color: #3c383b;
+    font-family: "Funnel Display", sans-serif;
     font-size: 16px;
     width: 300px;
     font-weight: 100;

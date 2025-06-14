@@ -7,14 +7,16 @@
 
 .layout {
     display: flex;
+    overflow-x: hidden;
     flex-direction: row;
     font-family: "Funnel Display", sans-serif;
 
     aside {
         width: 300px;
-        padding: 0 48px;
+        padding: 0 48px 100px 48px;
+        position: sticky;
 
-        border-right: 1px solid gray;
+        border-right: 2px solid rgb(216, 216, 216);
         
         ul {
             padding: 0;
@@ -24,9 +26,11 @@
         li {
             padding: 12px 0;
             font-size: 18px;
+            color: gray;
+            font-weight: 100;
 
             &:hover {
-                color: rgb(254, 150, 137);
+                color: #fe9689;
                 font-weight: bold;
                 cursor: pointer;
             }
@@ -43,7 +47,208 @@
     }
 
     main {
+        padding: 12px 48px 48px 48px;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+      
+        
+        h1 {
+            margin: 0;
+            color: #3c383b;
+        }
+
+        p {
+            color: #3c383b;
+        }
     }
 }
 
+.btn {
+    background-color: white;
+    font-family: "Funnel Display", sans-serif;
+    color: rgb(254, 150, 137);
+    border: none;
+    font-size: 18px;
+    padding: 0;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 24px;
+
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.details-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.parse-container {
+    margin-top: 12px;
+}
+
+.deliverables {
+    width: 100%;
+    padding-left: 24px;
+}
+
+.date {
+    grid-column: 4;
+    display: flex;
+    flex-direction: column;
+    max-width: 175px;
+}
+
+.stack {
+    max-width: 214px;
+    grid-column: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* project list item */
+.project-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 48px 108px;
+}
+
+.text-column {
+    width: 100%;
+    padding: 24px;
+    margin: 0 48px;
+}
+
+/* project more */
+.disclaimer {
+    border-radius: 8px;
+    background-color: #F5F5F5;
+    padding: 24px;
+}
+
+.disclaimer-bold {
+    color: black;
+    font-weight: bold;
+}
+
+.links-row {
+    display: flex;
+    margin: 48px 0;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.link-item {
+    display: flex;
+    flex-direction: row;
+    max-width: 300px;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.link-item:hover {
+    text-decoration: underline;
+}
+
+/* project profile */
+.tag {
+    border-radius: 24px;
+    padding: 4px 12px;
+    font-size: 14px;
+    width: fit-content;
+    margin: 0 12px 0 0;
+    color: #3C3D3D;
+    font-weight: normal;
+    margin-top: 12px;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    margin: 48px 0;
+    border-radius: 8px;
+}
+
+@media (max-width: 480px){
+    .links-row {
+        margin: 12px 0 24px 0;
+        flex-direction: column;
+    }
+
+    .link-item {
+        margin: 12px 0;
+    }
+
+    .tag {
+        background-color: #5BD2DC40;
+        font-size: 14px;
+    }
+
+    .tag-orange {
+        font-size: 14px;
+        margin-left: 4px;
+    }
+
+    .project-image {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .project-list-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    .details-grid {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .deliverables {
+        width: 100%
+    }
+    
+    .date {
+        width: 100%;
+        margin-top: 24px;
+    }
+    
+    .stack {
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .profile-spacing {
+        margin: 0;
+    }
+
+    .text-column {
+        width: 100%;
+        padding: 24px 0 0 0;
+        margin: 0;
+    }
+}

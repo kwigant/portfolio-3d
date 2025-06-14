@@ -6,22 +6,21 @@ export const allProjectData: projectData[] = [
   {
     id: "zen-tank",
     title: "Zen Tank",
-    img: "/project-header-image/zen-tank.png",
+    img: "/zen-tank.svg",
     tags: ["Demo Ready"],
     description:
-      "A recent personal project of mine that allows you to visualize an ecosystem for your fish! Inspired by my want to own a fish paired with my lack of knowledge on how to properly care for one.  This app helps you build an AR model of your fish tank and figure out optimal communal tank additions and conditions",
-    // projectDetails: {
-    //   deliverables:
-    //     "<p>Create an app that allows users to visualize their own fish tank by browsing a database of aquarium fish and plants and adding what they think suits their tank best.</p><p>Includes the following features: </p> <br/> <ul><li>CRUD operations on the tanks</li><li>Basic user account sign in / storage</li><li>Fish / plant profiles that can be added / removed from tank</li><li>Care instructions for personalized tank</li><ul><br/><p>Stretch Goal: integrate AR so user can fully visualize their tank in their space!</p>",
-    //   date: "November 2024 - Present",
-    //   role: "Lead Designer & Developer",
-    //   techStack: [
-    //     "React Native",
-    //     "Supabase",
-    //     "React Native Paper Library (Components & Theme)",
-    //   ],
-    //   designStack: ["Figma", "Blender"],
-    // },
+      "A personal project of mine that allows you to visualize an ecosystem for your fish! Inspired by my want to own a fish paired with my lack of knowledge on how to properly care for one. This app helps you build an AR model of your fish tank and figure out optimal communal tank additions and conditions",
+    projectDetails: {
+      deliverables:
+        "<p>Create an app that allows users to browse a database of aquarium fish and plants and add what they want to create their custom tank.</p><p>Stretch Goal: integrate AR so user can fully visualize their tank in their space!</p><p>Includes the following features: </p> <ul><li>CRUD operations on the tanks</li><li>Basic user account sign in / storage</li><li>Fish / plant profiles that can be added / removed from tank</li><li>Care instructions for personalized tank</li><ul>",
+      date: "November 2024 - February 2025",
+      role: "Lead Designer & Developer",
+      techStack: [
+        "React Native",
+        "Supabase",
+        "Figma"
+      ],
+    },
     // approach: [
     //   {
     //     title: "Research",
@@ -66,17 +65,17 @@ export const allProjectData: projectData[] = [
     id: "tarot-ai",
     title: "Tarot AI",
     tags: ["AI in Training"],
-    img: "/project-header-image/tarot-ai.png",
+    img: "/tarot-ai.svg",
     description:
       "A personal project that allows you to identify any tarot card and get it’s associated meaning through AI image detection and text generation. Also includes a stretch goal of integrating AR to demonstrate your reading visually.",
-    // projectDetails: {
-    //   deliverables:
-    //     "<p>Use AI image detection to correctly obtain the name and description of the current tarot card  in the user’s phone camera.</p><br/><p>If multiple tarot cards are captured in the camera, use AI to generate a reading that builds off the descriptions of the cards</p><br/><p>Package it all in a usable and enjoyable UI!</p><br/><p>Stretch Goal: Generate an AR image that visualizes your card / reading.</p>",
-    //   date: "February 2025 - Present",
-    //   role: "Lead Interaction Designer & Developer",
-    //   techStack: ["iOS - Swift", "Supabase", "Apple CoreML (AI Library)"],
-    //   designStack: ["Figma", "Blender"],
-    // },
+    projectDetails: {
+      deliverables:
+        "<p>Use AI image detection to correctly obtain the name and description of the current tarot card  in the user’s phone camera.</p><br/><p>If multiple tarot cards are captured in the camera, use AI to generate a reading that builds off the descriptions of the cards</p><br/><p>Package it all in a usable and enjoyable UI!</p><br/><p>Stretch Goal: Generate an AR image that visualizes your card / reading.</p>",
+      date: "February 2025 - Present",
+      role: "Lead Interaction Designer & Developer",
+      techStack: ["iOS - Swift", "Supabase", "Apple CoreML (AI Library)"],
+      designStack: ["Figma", "Blender"],
+    },
     // approach: [
     //   {
     //     title: "Plan",
@@ -105,17 +104,17 @@ export const allProjectData: projectData[] = [
     id: "portfolio",
     title: "My Portfolio",
     tags: ["Live Website"],
-    img: "/project-header-image/portfolio.png",
+    img: "/portfolio-3d.svg",
     description:
       "The website you are currently on has been designed and built by me! Designed through figma, built on React and hosted on Vercel for everyone in the world to view and get to know more about ~yours truly~",
-    // projectDetails: {
-    //   deliverables:
-    //     "<p>Have a responsive website available to the public that demonstrates who I am as both a developer and a designer.</p><br/><p>Showcase all my professional work over the years effectively and concisely as well as give an idea about who I am as a person.</p><br/><p>Display everything in a clean, usable, and enjoyable UI that is also mobile friendly</p>",
-    //   date: "December 2024 - January 2025 ",
-    //   role: "Lead Designer & Developer",
-    //   techStack: ["React", "NextJS", "TypeScript", "Vercel"],
-    //   designStack: ["Figma"],
-    // },
+    projectDetails: {
+      deliverables:
+        "<p>Have a responsive website available to the public that demonstrates who I am as both a developer and a designer.</p><br/><p>Showcase all my professional work over the years effectively and concisely as well as give an idea about who I am as a person.</p><br/><p>Display everything in a clean, usable, and enjoyable UI that is also mobile friendly</p>",
+      date: "December 2024 - January 2025 ",
+      role: "Lead Designer & Developer",
+      techStack: ["React", "NextJS", "TypeScript", "Vercel"],
+      designStack: ["Figma"],
+    },
     // approach: [
     //   {
     //     title: "Design",
@@ -161,23 +160,23 @@ export const allProjectData: projectData[] = [
     id: "cx-px-cloud",
     title: "Cisco | CX & PX Cloud",
     tags: ["Cisco Owned"],
-    img: "/project-header-image/cisco.png",
+    img: "/cisco-logo.svg",
     description:
       "An interface for Cisco customers / partners to gather insights across Cisco’s entire product portfolio. Featured enhanced analytics throughout the product’s lifecycle as well as permission based information access across clearance levels.",
-    // projectDetails: {
-    //   deliverables:
-    //     "<p>Collaborated with cross-functional teams to develop a design-accurate prototype for customer(CX) and partner(PX) portal demos; Usually under tight 1-3 month deadlines.</p><br/><p>Delivered 4-6 new web flow prototypes yearly, showcased to 16,000 in-person and 1M online attendees at Cisco Live (Cisco’s annual convention), receiving highly positive feedback.</p><br/><p>Implemented and aided in the task management of the front-end development and back-end API integration, collaborating with 12 designers and developers using SCRUM/agile methodologies.</p>",
-    //   date: "September 2020 - June 2024",
-    //   role: "UX Engineer; XDI Team Member",
-    //   techStack: [
-    //     "Angular",
-    //     "TypeScript",
-    //     "REST APIs",
-    //     "Nodejs",
-    //     "In-House Component Library",
-    //     "D3.js Data Visualizations",
-    //   ],
-    // },
+    projectDetails: {
+      deliverables:
+        "<p>Collaborated with cross-functional teams to develop a design-accurate prototype for customer(CX) and partner(PX) portal demos; Usually under tight 1-3 month deadlines.</p><br/><p>Delivered 4-6 new web flow prototypes yearly, showcased to 16,000 in-person and 1M online attendees at Cisco Live (Cisco’s annual convention), receiving highly positive feedback.</p><br/><p>Implemented and aided in the task management of the front-end development and back-end API integration, collaborating with 12 designers and developers using SCRUM/agile methodologies.</p>",
+      date: "September 2020 - June 2024",
+      role: "UX Engineer; XDI Team Member",
+      techStack: [
+        "Angular",
+        "TypeScript",
+        "REST APIs",
+        "Nodejs",
+        "In-House Component Library",
+        "D3.js Data Visualizations",
+      ],
+    },
     // approach: [
     //   {
     //     title: "Get Design Specs",
@@ -205,16 +204,16 @@ export const allProjectData: projectData[] = [
     id: "xdstudio",
     title: "Cisco | XDStudio & CMS",
     tags: ["Cisco Owned"],
-    img: "/project-header-image/cisco.png",
+    img: "/cisco-logo.svg",
     description:
       "An internal site intended to monitor of the various changes and updates within CX / PX Cloud. Powered by our own Content Management System (CMS) and Data Asset Management System (DAM), allowing designers and other admins to update XDStudio (and eventually other sites) as they see fit.",
-    // projectDetails: {
-    //   deliverables:
-    //     "<p>With a small team of 3, the goal was to: </p><br/><ul><li>Build a scalable CMS with React and AWS allowing for the creation and maintenance of internal sites.</li><li>Build a scalable Data Asset Management System which handles the storage of any media for the sites built using the CMS.</li><li>Using the CMS and DAM, create an internal blog site, based on given design specs, to keep track of updates on the customer and partner portals.</li></ul>",
-    //   date: "January 2022 - December 2023",
-    //   role: "UX Engineer; XDI Team Member",
-    //   techStack: ["React", "TypeScript", "AWS", "REST APIs"],
-    // },
+    projectDetails: {
+      deliverables:
+        "<p>With a small team of 3, the goal was to: </p><br/><ul><li>Build a scalable CMS with React and AWS allowing for the creation and maintenance of internal sites.</li><li>Build a scalable Data Asset Management System which handles the storage of any media for the sites built using the CMS.</li><li>Using the CMS and DAM, create an internal blog site, based on given design specs, to keep track of updates on the customer and partner portals.</li></ul>",
+      date: "January 2022 - December 2023",
+      role: "UX Engineer; XDI Team Member",
+      techStack: ["React", "TypeScript", "AWS", "REST APIs"],
+    },
     // approach: [
     //   {
     //     title: "Determine Priorities",
@@ -242,16 +241,16 @@ export const allProjectData: projectData[] = [
     id: "cx-platform",
     title: "Cisco | CX Platform",
     tags: ["Cisco Owned"],
-    img: "/project-header-image/cisco.png",
+    img: "/cisco-logo.svg",
     description:
       "A platform for both Cisco customers and partners to access information about all their Cisco products and services throughout Cisco’s portfolio. It included insights through data visualization, modular dashboard layouts, and AI assisted search functionality",
-    // projectDetails: {
-    //   deliverables:
-    //     "<p>Within the team, we were given 1 month to deliver a clickable prototype with the following features: </p><ul><li>Create a dashboard providing customers/ partners with product insights and AI-powered search (specs provided).</li><li>Allow users to access information specific to their products across the whole Cisco portfolio.</li></ul>",
-    //   date: "August 2024 - September 2024",
-    //   role: "UX Engineer; XDI Team Member",
-    //   techStack: ["React", "TypeScript", "GraphQL"],
-    // },
+    projectDetails: {
+      deliverables:
+        "<p>Within the team, we were given 1 month to deliver a clickable prototype with the following features: </p><ul><li>Create a dashboard providing customers/ partners with product insights and AI-powered search (specs provided).</li><li>Allow users to access information specific to their products across the whole Cisco portfolio.</li></ul>",
+      date: "August 2024 - September 2024",
+      role: "UX Engineer; XDI Team Member",
+      techStack: ["React", "TypeScript", "GraphQL"],
+    },
     // approach: [
     //   {
     //     title: "Get Specs",
@@ -279,16 +278,16 @@ export const allProjectData: projectData[] = [
     id: "houseme",
     title: "HouseMe Network LLC",
     tags: ["My Startup"],
-    img: "/project-header-image/houseme.png",
+    img: "/houseme-logo.svg",
     description:
       "An ambitious personal project turned start-up - a social network dedicated to helping you with all your rental needs! From search, to sign, and beyond we are a platform dedicated to helping both renters and landlords throughout every step of the process.",
-    // projectDetails: {
-    //   deliverables:
-    //     "<p>Potential Tenants can search (either in a group or individually) for their future listing, apply, and hear back all on the site.</p><br/><p>Landlord and Tenant dedicated portals to help specific user types fulfill their needs.</p><br/><p>Tenants and landlords can each view their current rental and manage any household chores / notifications / messages between housing group and/or landlord.</p><br/><p>Stretch Goal: referral system for tenants to recommend other tenants to a property with hopes of mitigating landlord struggle of filling a place quickly.</p>",
-    //   date: "April 2019 - March 2024",
-    //   role: "CEO, Co-Founder, Lead Frontend Engineer & Designer, Head of Finance & Business Operations, Recruiter & Trainer",
-    //   techStack: ["React", "TypeScript", "GraphQL"],
-    // },
+    projectDetails: {
+      deliverables:
+        "<p>Potential Tenants can search (either in a group or individually) for their future listing, apply, and hear back all on the site.</p><br/><p>Landlord and Tenant dedicated portals to help specific user types fulfill their needs.</p><br/><p>Tenants and landlords can each view their current rental and manage any household chores / notifications / messages between housing group and/or landlord.</p><br/><p>Stretch Goal: referral system for tenants to recommend other tenants to a property with hopes of mitigating landlord struggle of filling a place quickly.</p>",
+      date: "April 2019 - March 2024",
+      role: "CEO, Co-Founder, Lead Frontend Engineer & Designer, Head of Finance & Business Operations, Recruiter & Trainer",
+      techStack: ["React", "TypeScript", "GraphQL"],
+    },
     // approach: [
     //   {
     //     title: "Ideate",

@@ -19,7 +19,7 @@ export type projectData = {
     tags: string[];
     img: string;
     description: string;
-    // projectDetails: projectDetails;
+    projectDetails: projectDetails;
     // approach: approach[];
     more: more;
     imgs: string[]
@@ -30,6 +30,15 @@ export type projectLink = {
     img: string;
     link: string;
 }
+
+export type projectDetails = {
+    deliverables: string;
+    date: string;
+    role: string;
+    techStack: string[];
+    designStack?: string[];
+};
+
 
 type more = {
     description: string;

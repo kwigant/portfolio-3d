@@ -6,7 +6,7 @@ import Link from "next/link";
 
 type PopupProps = {
   name: string;
-  position: { top: string; left: string, width: string, height: string };
+  position: { top: string; left: string; width: string; height: string };
   onClose: () => void;
 };
 
@@ -14,7 +14,6 @@ export default function Popup({ name, position, onClose }: PopupProps) {
   const ref = useRef<HTMLDivElement>(null);
   const toEmail = "to: kirsten.wigant@gmail.com";
   const [showContent, setShowContent] = useState(false);
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (ref.current && !ref.current.contains(event.target as Node)) {
@@ -34,18 +33,20 @@ export default function Popup({ name, position, onClose }: PopupProps) {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [onClose, ]);
+  }, [onClose]);
 
   const getAnimationClass = () => {
-    switch(position.width) {
-      case '400px': 
-        if (position.height === '250px') return 'popup-250-h'
-        if (position.height === '450px') return 'popup-400-r';
-        return 'popup-400-l';
-      case '850px': return 'popup-850';
-      case '500px': return 'popup-500';
+    switch (position.width) {
+      case "400px":
+        if (position.height === "250px") return "popup-250-h";
+        if (position.height === "450px") return "popup-400-r";
+        return "popup-400-l";
+      case "850px":
+        return "popup-850";
+      case "500px":
+        return "popup-500";
     }
-  }
+  };
 
   const getPopUpContent = () => {
     if (showContent) {
@@ -62,6 +63,10 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                 </p>
               </div>
               <div className="column">
+                <div className="row">
+                  <h3>Send an Email</h3>
+                  <Link href={"/contact"}>Full Screen</Link>
+                </div>
                 <input disabled value={toEmail}></input>
                 <input placeholder={"your-email@email.com"}></input>
                 <textarea placeholder={"email"}></textarea>
@@ -116,14 +121,14 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                 {projects.map((p, i) => {
                   return (
                     <Link className="next-link" href={p.path} key={i}>
-                    <li className="clickable-li">
-                      <Image width={80} height={80} src={p.src} alt={p.alt} />
-                      <div className="column">
-                        <p className="degree">{p.title}</p>
-                        <p className="school">{p.description}</p>
-                        <p className="date">{p.date}</p>
-                      </div>
-                    </li>
+                      <li className="clickable-li">
+                        <Image width={80} height={80} src={p.src} alt={p.alt} />
+                        <div className="column">
+                          <p className="degree">{p.title}</p>
+                          <p className="school">{p.description}</p>
+                          <p className="date">{p.date}</p>
+                        </div>
+                      </li>
                     </Link>
                   );
                 })}
