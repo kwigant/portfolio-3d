@@ -3,7 +3,7 @@ import { allProjectData } from "@/constants/project-data";
 import { projectData } from "@/constants/types";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import "./Projects.css";
+import "../../styles/Projects.css";
 import Link from "next/link";
 import Image from "next/image";
 import parse from "html-react-parser";
@@ -42,6 +42,7 @@ export default function Profile() {
                 src={backHover ? "/arrow-pink.png" : "/arrow-black.png"}
               />
             </button>
+            <h3>All Projects</h3>
             <ul>
               {allProjectData.map((d, i) => {
                 return (

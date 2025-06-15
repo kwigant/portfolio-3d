@@ -1,0 +1,155 @@
+/** Contact Popup */
+.container {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+aside {
+    width: 300px;
+    padding: 0 48px 100px 48px;
+    height: 500px;
+    border-right: 2px solid rgb(216, 216, 216);
+}
+
+main {
+    flex-grow: 1;
+    padding: 0 48px;
+}
+
+input, textarea {
+    font-family: "Funnel Display", sans-serif;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid rgb(212, 212, 212) ;
+    width: 100%;
+}
+
+input {
+    height: 40px;
+    margin-bottom: 12px;
+    padding: 4px 12px;
+    font-family: "Funnel Display", sans-serif;
+
+    &:hover{
+        border-bottom: 2px solid rgb(254, 150, 137);
+    }
+    &:disabled&:hover {
+        border-bottom: 2px solid rgb(212, 212, 212) ;
+    }
+    &:focus {
+        border-radius: 8px;
+        outline: none !important;
+        border:2px solid rgb(254, 150, 137);
+        box-shadow: 0 0 10px #c7c7c7;
+    }
+}
+
+textarea {
+    height: 250px;
+    padding: 12px;
+    font-family: "Funnel Display", sans-serif;
+
+     &:hover{
+        border-bottom: 2px solid rgb(254, 150, 137);
+    }
+
+    &:focus {
+        border-radius: 8px;
+        outline: none !important;
+        border:2px solid rgb(254, 150, 137);
+        box-shadow: 0 0 10px #c7c7c7;
+    }
+} 
+
+.img {
+    width: 100%;
+    height: 50%;
+    border-radius: 8px;
+    background-color: gray;
+    margin-bottom: 81px;
+}
+
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column:first-child {
+    padding: 0 24px;
+}
+
+.column:last-child {
+    padding: 0 24px;
+}
+
+.justified-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 24px;
+    width: 100%;
+}
+
+h2 {
+    font-family: "Funnel Display", sans-serif;
+    color: #3c383b;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+p {
+    color: #3c383b;
+    font-family: "Funnel Display", sans-serif;
+    font-size: 16px;
+    width: 300px;
+    font-weight: 100;
+}
+
+.end-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.primary-btn {
+    font-family: "Funnel Display", sans-serif;
+    background-color: rgb(254, 150, 137);
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 8px 16px;
+    cursor: pointer;
+
+    &:disabled {
+        background-color: gray;
+        cursor: none;
+    }
+}
+
+.secondary-btn {
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: "Funnel Display", sans-serif;
+    color: rgb(254, 150, 137);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0;
+    cursor: pointer;
+    margin-bottom: 24px;
+}

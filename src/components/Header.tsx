@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
-import './Header.css';
+import '../styles/Header.css';
 
 type HeaderProps = {
     activeTab: number,

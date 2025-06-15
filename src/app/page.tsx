@@ -2,7 +2,7 @@
 
 // src/App.tsx
 import React, { useState } from "react";
-import "./globals.css";
+import "../styles/globals.css";
 import Header from "@/components/Header";
 import Popup from "@/components/PopUp";
 import CanvasModel from "@/components/Canvas";
@@ -44,9 +44,9 @@ const Home: React.FC = () => {
             name={"Technologies"}
             position={{
               top: "45%",
-              left: "60%",
-              width: "500px",
-              height: "250px",
+              left: "52%",
+              width: "600px",
+              height: "320px",
             }}
             onClose={() => setTab(-1)}
           />
@@ -55,10 +55,10 @@ const Home: React.FC = () => {
           <Popup
             name={"Contact"}
             position={{
-              top: "55%",
-              left: "20%",
-              width: "850px",
-              height: "350px",
+              top: "45%",
+              left: "15%",
+              width: "1000px",
+              height: "400px",
             }}
             onClose={() => setTab(-1)}
           />

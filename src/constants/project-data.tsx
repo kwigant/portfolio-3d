@@ -3,6 +3,60 @@ import { projectData } from "./types";
  * Data for all Projects
  */
 export const allProjectData: projectData[] = [
+   {
+    id: "portfolio",
+    title: "My Portfolio",
+    tags: ["Live Website"],
+    img: "/portfolio-3d.svg",
+    description:
+      "The website you are currently on has been designed and built by me! Designed through figma, built on React and hosted on Vercel for everyone in the world to view and get to know more about ~yours truly~",
+    projectDetails: {
+      deliverables:
+        "<p>Have a responsive website available to the public that demonstrates who I am as both a developer and a designer.</p><br/><p>Showcase all my professional work over the years effectively and concisely as well as give an idea about who I am as a person.</p><br/><p>Display everything in a clean, usable, and enjoyable UI that is also mobile friendly</p>",
+      date: "June 2025 ",
+      role: "Lead Designer & Developer",
+      techStack: ["React + React Three.js", "NextJS", "TypeScript", "Vercel", "Blender + Figma"],
+    },
+    // approach: [
+    //   {
+    //     title: "Design",
+    //     description:
+    //       "<p>Of all my projects, this is the one I had the most pressure around. I’ve never had my own website and I wanted it to make a lasting impression. I took it slow with the design process taking the bulk of my time - reiterating designs on Figma with the goal of really trying to consider multiple layouts and ideas in order to get the best result.</p>",
+    //   },
+    //   {
+    //     title: "Iterate",
+    //     description:
+    //       "<p>It was a lot of the detail work that required the most iteration. The page layouts came to me relatively easily but the visuals took me months to make. Every visual you see was created by me with exception of a few icons I used in their construction. </p>",
+    //   },
+    //   {
+    //     title: "Launch",
+    //     description:
+    //       "<p>After all that design iteration, the development ended up being the easiest part! The website itself is technically very simple, being a static React website hosted on Vercel. But the goal was really to focus on my fundamentals and get something out to the public that I am proud of - and I’m glad to say that I am!</p>",
+    //   },
+    // ],
+    more: {
+      description:
+        "This project is up and running (you’re reading this aren’t you :P)  - if you want to get a more in depth look at my work, check out the source!",
+      links: [
+        {
+          title: "Github Repo",
+          img: "/visuals/github.png",
+          link: "https://github.com/kwigant/portfolio",
+        },
+        {
+          title: "Figma Designs",
+          img: "/visuals/figma-light-blue.png",
+          link: "https://www.figma.com/design/0zuA4h6uzyohgGciMdN91q/Kirsten-Wigant-Portfolio?node-id=527-6060&t=lFg0rMl2PVAA93jq-0",
+        },
+        {
+          title: "Figma Prototype",
+          img: "/visuals/figma-orange.png",
+          link: "https://www.figma.com/proto/0zuA4h6uzyohgGciMdN91q/Kirsten-Wigant-Portfolio?node-id=527-7250&t=lFg0rMl2PVAA93jq-0&scaling=min-zoom&content-scaling=fixed&page-id=143%3A2&hide-ui=1",
+        },
+      ],
+    },
+    imgs: ["/project-page-images/portfolio-1.svg", "/project-page-images/portfolio-2.svg"],
+  },
   {
     id: "zen-tank",
     title: "Zen Tank",
@@ -100,61 +154,7 @@ export const allProjectData: projectData[] = [
     },
     imgs: ["/project-page-images/tarot-ai-1.svg", "/project-page-images/tarot-ai-2.svg"],
   },
-  {
-    id: "portfolio",
-    title: "My Portfolio",
-    tags: ["Live Website"],
-    img: "/portfolio-3d.svg",
-    description:
-      "The website you are currently on has been designed and built by me! Designed through figma, built on React and hosted on Vercel for everyone in the world to view and get to know more about ~yours truly~",
-    projectDetails: {
-      deliverables:
-        "<p>Have a responsive website available to the public that demonstrates who I am as both a developer and a designer.</p><br/><p>Showcase all my professional work over the years effectively and concisely as well as give an idea about who I am as a person.</p><br/><p>Display everything in a clean, usable, and enjoyable UI that is also mobile friendly</p>",
-      date: "December 2024 - January 2025 ",
-      role: "Lead Designer & Developer",
-      techStack: ["React", "NextJS", "TypeScript", "Vercel"],
-      designStack: ["Figma"],
-    },
-    // approach: [
-    //   {
-    //     title: "Design",
-    //     description:
-    //       "<p>Of all my projects, this is the one I had the most pressure around. I’ve never had my own website and I wanted it to make a lasting impression. I took it slow with the design process taking the bulk of my time - reiterating designs on Figma with the goal of really trying to consider multiple layouts and ideas in order to get the best result.</p>",
-    //   },
-    //   {
-    //     title: "Iterate",
-    //     description:
-    //       "<p>It was a lot of the detail work that required the most iteration. The page layouts came to me relatively easily but the visuals took me months to make. Every visual you see was created by me with exception of a few icons I used in their construction. </p>",
-    //   },
-    //   {
-    //     title: "Launch",
-    //     description:
-    //       "<p>After all that design iteration, the development ended up being the easiest part! The website itself is technically very simple, being a static React website hosted on Vercel. But the goal was really to focus on my fundamentals and get something out to the public that I am proud of - and I’m glad to say that I am!</p>",
-    //   },
-    // ],
-    more: {
-      description:
-        "This project is up and running (you’re reading this aren’t you :P)  - if you want to get a more in depth look at my work, check out the source!",
-      links: [
-        {
-          title: "Github Repo",
-          img: "/visuals/github.png",
-          link: "https://github.com/kwigant/portfolio",
-        },
-        {
-          title: "Figma Designs",
-          img: "/visuals/figma-light-blue.png",
-          link: "https://www.figma.com/design/0zuA4h6uzyohgGciMdN91q/Kirsten-Wigant-Portfolio?node-id=527-6060&t=lFg0rMl2PVAA93jq-0",
-        },
-        {
-          title: "Figma Prototype",
-          img: "/visuals/figma-orange.png",
-          link: "https://www.figma.com/proto/0zuA4h6uzyohgGciMdN91q/Kirsten-Wigant-Portfolio?node-id=527-7250&t=lFg0rMl2PVAA93jq-0&scaling=min-zoom&content-scaling=fixed&page-id=143%3A2&hide-ui=1",
-        },
-      ],
-    },
-    imgs: ["/project-page-images/portfolio-1.svg", "/project-page-images/portfolio-2.svg"],
-  },
+ 
  
   {
     id: "cx-px-cloud",

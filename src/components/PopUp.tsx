@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "./PopUp.css";
+import "../styles/PopUp.css";
 import Image from "next/image";
 import { career, education, projects, tech } from "@/constants/popup-data";
 import Link from "next/link";
@@ -39,11 +39,13 @@ export default function Popup({ name, position, onClose }: PopupProps) {
     switch (position.width) {
       case "400px":
         if (position.height === "250px") return "popup-250-h";
-        if (position.height === "450px") return "popup-400-r";
+        if (position.height === "320px" ) return "popup-400-r";
+        if (position.height === "450px" ) return "popup-400-r";
+
         return "popup-400-l";
-      case "850px":
+      case "1000px":
         return "popup-850";
-      case "500px":
+      case "600px":
         return "popup-500";
     }
   };
@@ -53,27 +55,41 @@ export default function Popup({ name, position, onClose }: PopupProps) {
       switch (name) {
         case "Contact":
           return (
-            <div className="row">
-              <div className="column">
+            <div className="justified-row">
+              <aside>
                 <div className="img"></div>
-                <h2>Contact Me!</h2>
-                <p>
-                  Whether you need a website or app built, or are just curious
-                  about my projects and background, let&apos;s get in touch!
+
+                <h3>Let&apos;s Get in Touch</h3>
+                <p className="subtitle">
+                  I&apos;m available for freelance work!
                 </p>
-              </div>
-              <div className="column">
-                <div className="row">
+
+                <p>
+                  Need a website or app? I&apos;ve got design and development
+                  covered - drop me a message :)
+                </p>
+              </aside>
+              <main>
+                <div className="justified-row">
                   <h3>Send an Email</h3>
-                  <Link href={"/contact"}>Full Screen</Link>
+                  <Link className="expand-link" href={"/contact"}>
+                    Expand
+                    <Image
+                      style={{ marginLeft: 8 }}
+                      src={"/expand.png"}
+                      width={24}
+                      height={24}
+                      alt={"expand"}
+                    />
+                  </Link>
                 </div>
                 <input disabled value={toEmail}></input>
                 <input placeholder={"your-email@email.com"}></input>
                 <textarea placeholder={"email"}></textarea>
                 <div className="end-row">
-                  <button className="send-btn">Send</button>
+                  <button className="primary-btn">Send</button>
                 </div>
-              </div>
+              </main>
             </div>
           );
         case "Education":
@@ -85,6 +101,7 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                   return (
                     <li key={i}>
                       <Image
+                        style={{marginRight: 12}}
                         width={e.width}
                         height={e.height}
                         src={e.src}
@@ -107,7 +124,19 @@ export default function Popup({ name, position, onClose }: PopupProps) {
               <h2>Technologies</h2>
               <div className="grid">
                 {tech.map((t, i) => {
-                  return <div key={i}>{t.tech}</div>;
+                  return (
+                    <div key={i} className="tech-container">
+                      <Image
+                        style={{ borderRadius: 8, marginRight: 12 }}
+                        height={60}
+                        width={60}
+                        alt="logo"
+                        src={t.img}
+                        
+                      />
+                      <p className="tech-logos">{t.tech}</p>
+                    </div>
+                  );
                 })}
               </div>
             </div>
@@ -122,7 +151,7 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                   return (
                     <Link className="next-link" href={p.path} key={i}>
                       <li className="clickable-li">
-                        <Image width={80} height={80} src={p.src} alt={p.alt} />
+                        <Image style={{marginRight: 12}} width={80} height={80} src={p.src} alt={p.alt} />
                         <div className="column">
                           <p className="degree">{p.title}</p>
                           <p className="school">{p.description}</p>
@@ -133,7 +162,7 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                   );
                 })}
               </ul>
-              <button className="cancel-btn">View All (7)</button>
+              <button className="primary-btn">View All (7)</button>
             </div>
           );
         case "Career":
@@ -144,7 +173,7 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                 {career.map((p, i) => {
                   return (
                     <li key={i}>
-                      <Image width={60} height={60} src={p.src} alt={p.alt} />
+                      <Image style={{marginRight: 12}} width={60} height={60} src={p.src} alt={p.alt} />
                       <div className="column">
                         <p className="degree">{p.title}</p>
                         <p className="school">{p.description}</p>
