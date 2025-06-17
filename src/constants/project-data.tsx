@@ -7,7 +7,7 @@ export const allProjectData: projectData[] = [
     id: "portfolio",
     title: "My Portfolio",
     tags: ["Live Website"],
-    img: "/portfolio-3d.svg",
+    img: "/visuals/portfolio-3d.svg",
     description:
       "The website you are currently on has been designed and built by me! Designed through figma, built on React and hosted on Vercel for everyone in the world to view and get to know more about ~yours truly~",
     projectDetails: {
@@ -63,7 +63,7 @@ export const allProjectData: projectData[] = [
   {
     id: "zen-tank",
     title: "Zen Tank",
-    img: "/zen-tank.svg",
+    img: "/visuals/zen-tank.svg",
     tags: ["Demo Ready"],
     description:
       "A personal project of mine that allows you to visualize an ecosystem for your fish! Inspired by my want to own a fish paired with my lack of knowledge on how to properly care for one. This app helps you build an AR model of your fish tank and figure out optimal communal tank additions and conditions",
@@ -131,7 +131,7 @@ export const allProjectData: projectData[] = [
     id: "tarot-ai",
     title: "Tarot AI",
     tags: ["AI in Training"],
-    img: "/tarot-ai.svg",
+    img: "/visuals/tarot-ai.svg",
     description:
       "A personal project that allows you to identify any tarot card and get it’s associated meaning through AI image detection and text generation. Also includes a stretch goal of integrating AR to demonstrate your reading visually.",
     projectDetails: {
@@ -176,7 +176,7 @@ export const allProjectData: projectData[] = [
     id: "cx-px-cloud",
     title: "Cisco | CX & PX Cloud",
     tags: ["Cisco Owned"],
-    img: "/cisco-logo.svg",
+    img: "/visuals/cisco-logo.svg",
     description:
       "An interface for Cisco customers / partners to gather insights across Cisco’s entire product portfolio. Featured enhanced analytics throughout the product’s lifecycle as well as permission based information access across clearance levels.",
     projectDetails: {
@@ -223,7 +223,7 @@ export const allProjectData: projectData[] = [
     id: "xdstudio",
     title: "Cisco | XDStudio & CMS",
     tags: ["Cisco Owned"],
-    img: "/cisco-logo.svg",
+    img: "/visuals/cisco-logo.svg",
     description:
       "An internal site intended to monitor of the various changes and updates within CX / PX Cloud. Powered by our own Content Management System (CMS) and Data Asset Management System (DAM), allowing designers and other admins to update XDStudio (and eventually other sites) as they see fit.",
     projectDetails: {
@@ -266,7 +266,7 @@ export const allProjectData: projectData[] = [
     id: "cx-platform",
     title: "Cisco | CX Platform",
     tags: ["Cisco Owned"],
-    img: "/cisco-logo.svg",
+    img: "/visuals/cisco-logo.svg",
     description:
       "A platform for both Cisco customers and partners to access information about all their Cisco products and services throughout Cisco’s portfolio. It included insights through data visualization, modular dashboard layouts, and AI assisted search functionality",
     projectDetails: {
@@ -308,7 +308,7 @@ export const allProjectData: projectData[] = [
     id: "houseme",
     title: "HouseMe Network LLC",
     tags: ["My Startup"],
-    img: "/houseme-logo.svg",
+    img: "/visuals/houseme-logo.svg",
     description:
       "An ambitious personal project turned start-up - a social network dedicated to helping you with all your rental needs! From search, to sign, and beyond we are a platform dedicated to helping both renters and landlords throughout every step of the process.",
     projectDetails: {

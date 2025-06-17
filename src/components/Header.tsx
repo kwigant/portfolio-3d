@@ -48,7 +48,7 @@ export default function Header(props: HeaderProps) {
             width={32}
             height={32}
             alt="back"
-            src={backHover ? "/arrow-pink.png" : "/arrow-black.png"}
+            src={backHover ? "/icons/arrow-pink.png" : "/icons/arrow-black.png"}
           />
         </button>
       )}
@@ -62,7 +62,7 @@ export default function Header(props: HeaderProps) {
             width={50}
             height={50}
             alt="home"
-            src={"/desk.svg"}
+            src={"/icons/desk.svg"}
           />
         </button>
       )}
