@@ -1,15 +1,13 @@
 import Header from "@/components/Header";
 import { devData } from "@/constants/project-list-data";
-import { useState } from "react";
 import "../styles/Projects.css";
 import Image from "next/image";
 import Link from "next/link";
 export default function Projects() {
-  const [tab, setTab] = useState(-1);
 
   return (
     <div >
-      <Header back={true} activeTab={tab} setActiveTab={setTab} />
+      <Header back={true} />
       {devData.map((d, i) => (
         <div
           style={{

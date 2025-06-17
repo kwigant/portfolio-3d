@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 import "../styles/Header.css";
 import Image from "next/image";
 import { useRouter } from 'next/navigation'  // Usage: App router
@@ -7,31 +7,37 @@ import Link from "next/link";
 type HeaderProps = {
   back: boolean;
   home?: boolean;
-  activeTab: number;
-  setActiveTab: Dispatch<SetStateAction<number>>;
 };
 
 export default function Header(props: HeaderProps) {
   const [backHover, setBackHover] = useState(false);
   const router = useRouter()
-  function getTabStyle(idx: number) {
-    if (props.activeTab === idx) return "link-active";
+
+   const params = new URLSearchParams();
+   
+  function setTabByURL(tab: string) {
+      params.set('tab', tab);
+      router.push(`/?${params.toString()}`);
+  }
+
+  function getTabStyle(idx: string) {
+    if (params.get('tab') === idx) return "link-active";
     else return "link";
   }
   return (
     <header style={{justifyContent: props.back ? 'center' : 'space-evenly'}}>
       {!props.back && (
         <h4
-          onClick={() => props.setActiveTab(0)}
-          className={`${getTabStyle(0)} hover-underline-animation left`}
+          onClick={() => setTabByURL('career')}
+          className={`${getTabStyle('career')} hover-underline-animation left`}
         >
           Career
         </h4>
       )}
       {!props.back && (
         <h4
-          onClick={() => props.setActiveTab(1)}
-          className={`${getTabStyle(1)} hover-underline-animation left`}
+          onClick={() =>  setTabByURL('qualifications')}
+          className={`${getTabStyle('qualifications')} hover-underline-animation left`}
         >
           Qualifications
         </h4>
@@ -62,16 +68,16 @@ export default function Header(props: HeaderProps) {
       )}
       {!props.back && (
         <h4
-          onClick={() => props.setActiveTab(2)}
-          className={`${getTabStyle(2)} hover-underline-animation left`}
+          onClick={() =>  setTabByURL('contact')}
+          className={`${getTabStyle('contact')} hover-underline-animation left`}
         >
           Contact
         </h4>
       )}
       {!props.back && (
         <h4
-          onClick={() => props.setActiveTab(3)}
-          className={`${getTabStyle(3)} hover-underline-animation left`}
+          onClick={() =>  setTabByURL('projects')}
+          className={`${getTabStyle('projects')} hover-underline-animation left`}
         >
           Projects
         </h4>

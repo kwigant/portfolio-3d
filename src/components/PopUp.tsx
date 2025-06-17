@@ -13,6 +13,7 @@ type PopupProps = {
 export default function Popup({ name, position, onClose }: PopupProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [showContent, setShowContent] = useState(false);
+  
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (ref.current && !ref.current.contains(event.target as Node)) {

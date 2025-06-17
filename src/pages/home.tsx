@@ -1,21 +1,36 @@
 "use client";
 
 // src/App.tsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/globals.css";
 import Header from "@/components/Header";
 import Popup from "@/components/PopUp";
 import CanvasModel from "@/components/Canvas";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const Home: React.FC = () => {
-  const [tab, setTab] = useState(-1);
+  const [tab, setTab] = useState('');
+  const searchParams = useSearchParams();
+  const router = useRouter()
+  useEffect(()=> {
+    if (searchParams) {
+      const urlTab = searchParams.get('tab')
+      
+      if( urlTab ) setTab(urlTab)
+    }
+  }, [searchParams]) 
+
+  function closePopup() {
+    setTab('')
+    router.replace('/')
+  }
 
   return (
     <>
-      <Header back={false} activeTab={tab} setActiveTab={setTab} />
+      <Header back={false} />
       <div className="container">
        <CanvasModel/>
-        {tab === 0 && (
+        {tab === 'career' && (
           <Popup
             name={"Career"}
             position={{
@@ -24,10 +39,10 @@ const Home: React.FC = () => {
               width: "400px",
               height: "325px",
             }}
-            onClose={() => setTab(-1)}
+            onClose={() =>closePopup()}
           />
         )}
-        {tab === 1 && (
+        {tab === 'qualifications' && (
           <Popup
             name={"Education"}
             position={{
@@ -36,10 +51,10 @@ const Home: React.FC = () => {
               width: "400px",
               height: "250px",
             }}
-            onClose={() => setTab(-1)}
+            onClose={() => closePopup()}
           />
         )}
-        {tab === 1 && (
+        {tab === 'qualifications' && (
           <Popup
             name={"Technologies"}
             position={{
@@ -48,10 +63,10 @@ const Home: React.FC = () => {
               width: "600px",
               height: "320px",
             }}
-            onClose={() => setTab(-1)}
+            onClose={() => closePopup()}
           />
         )}
-        {tab === 2 && (
+        {tab === 'contact' && (
           <Popup
             name={"Contact"}
             position={{
@@ -60,10 +75,10 @@ const Home: React.FC = () => {
               width: "850px",
               height: "250px",
             }}
-            onClose={() => setTab(-1)}
+            onClose={() => closePopup()}
           />
         )}
-        {tab === 3 && (
+        {tab === 'projects' && (
           <Popup
             position={{
               top: "27%",
@@ -72,7 +87,7 @@ const Home: React.FC = () => {
               height: "450px",
             }}
             name={"Projects"}
-            onClose={() => setTab(-1)}
+            onClose={() => closePopup()}
           />
         )}
       </div>

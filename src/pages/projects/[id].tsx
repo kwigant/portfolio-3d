@@ -2,14 +2,12 @@ import Header from "@/components/Header";
 import { allProjectData } from "@/constants/project-data";
 import { projectData } from "@/constants/types";
 import { useRouter } from "next/router";
-import { useState } from "react";
 import "../../styles/Projects.css";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Profile() {
   const router = useRouter();
-  const [tab, setTab] = useState(3);
   const id = router.query.id;
   const profile = allProjectData.filter((pd: projectData) => {
     return pd.id === id || undefined;
@@ -18,7 +16,7 @@ export default function Profile() {
   if (profile !== undefined && profile[0]) {
     return (
       <div style={{ overflow: "hidden", height: "100%" }}>
-        <Header back={true} home={true} activeTab={tab} setActiveTab={setTab} />
+        <Header back={true} home={true} />
 
         <div className="layout">
           <aside>

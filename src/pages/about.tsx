@@ -1,14 +1,12 @@
 import Header from "@/components/Header";
-import { useState } from "react";
 import "../styles/Projects.css";
 import { abtData } from "@/constants/about-data";
 import Image from "next/image";
 
 export default function About() {
-  const [tab, setTab] = useState(-1);
   return (
     <div className="abt-page">
-      <Header back={true} activeTab={tab} setActiveTab={setTab} />
+      <Header back={true} />
 
       {abtData.map((a, i) => (
         <div className="abt-row" key={i}>
