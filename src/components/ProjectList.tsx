@@ -1,7 +1,7 @@
 import { project } from "@/constants/types";
 import Image from "next/image";
 import Link from "next/link";
-import "./Project.css";
+import "../styles/Project.css";
 
 export default function ProjectListItem(props: project) {
 

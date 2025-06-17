@@ -1,51 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
 
 header {
-    font-family: "Funnel Display", sans-serif;
-    display: flex;
-    color: #3c383b;
-    flex-direction: row;
-    align-items: center;
-    margin: 48px 0 24px 0;
-    width: 100%;
-    justify-content: space-evenly;
+  font-family: "Funnel Display", sans-serif;
+  display: flex;
+  color: #3c383b;
+  flex-direction: row;
+  margin: 48px 0 24px 0;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .name-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 0;
+  color: #3c383b;
+  text-decoration: none;
+
+  h1,
+  h4 {
+    padding: 0;
     margin: 0;
+  }
 
-    h1, h4 {
-        padding: 0;
-        margin: 0;
-    }
+  h4 {
+    font-weight: 200;
+  }
 
-    /* h1 {
-       color: rgb(254, 150, 137);
-    } */
-
-    h4 {
-        font-weight: 200;
-    }
+  &:hover {
+    color: rgb(254, 150, 137);
+    cursor: pointer;
+  }
 }
-.link, .link-active {
+
+.link,
+.link-active {
   padding: 12px;
   font-weight: 200;
-  margin: 0 24px; 
+  margin: 0 24px;
   cursor: pointer;
   font-size: 18px;
 
   &:hover {
     font-weight: bold;
-    color: rgb(254, 150, 137); 
+    color: rgb(254, 150, 137);
   }
 }
 
 .link-active {
-    font-weight: bold !important;
-    color: rgb(254, 150, 137) !important; 
+  font-weight: bold !important;
+  color: rgb(254, 150, 137) !important;
 }
 
 .hover-underline-animation {
@@ -54,7 +60,7 @@ header {
 }
 
 .hover-underline-animation::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -79,4 +85,25 @@ header {
 
 .hover-underline-animation.left:hover::after {
   transform-origin: bottom left;
+}
+
+.back-link {
+  position: absolute;
+  left: 48px;
+  top: 64px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+
+.desk-link {
+  position: absolute;
+  right: 48px;
+  top: 64px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+ 
 }

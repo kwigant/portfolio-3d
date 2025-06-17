@@ -12,7 +12,6 @@ type PopupProps = {
 
 export default function Popup({ name, position, onClose }: PopupProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const toEmail = "to: kirsten.wigant@gmail.com";
   const [showContent, setShowContent] = useState(false);
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -39,8 +38,8 @@ export default function Popup({ name, position, onClose }: PopupProps) {
     switch (position.width) {
       case "400px":
         if (position.height === "250px") return "popup-250-h";
-        if (position.height === "320px" ) return "popup-400-r";
-        if (position.height === "450px" ) return "popup-400-r";
+        if (position.height === "320px") return "popup-400-r";
+        if (position.height === "450px") return "popup-400-r";
 
         return "popup-400-l";
       case "850px":
@@ -56,33 +55,39 @@ export default function Popup({ name, position, onClose }: PopupProps) {
         case "Contact":
           return (
             <div className="row">
-               <div className="img"></div>
-              <div className="column" style={{width: '100%'}}>
+              <div className="img"></div>
+              <div className="column" style={{ width: "100%" }}>
                 <h3>Let&apos;s Get in Touch</h3>
                 <p className="subtitle">
                   I&apos;m currently available for freelance work!
-
-
                 </p>
                 <p>
-                 Whether you need a website, an app, or just have questions about my work, feel free to reach out. I handle both design and development and would love to hear from you.
+                  Whether you need a website, an app, or just have questions
+                  about my work, feel free to reach out. I handle both design
+                  and development and would love to hear from you.
                 </p>
 
                 <div className="row">
                   <div className="row">
-                    <Image src={'/linkedin.png'} width={40} height={40} alt={'linkedin'}/>
+                    <Image
+                      src={"/linkedin.png"}
+                      width={40}
+                      height={40}
+                      alt={"linkedin"}
+                    />
                     <p>LinkedIn</p>
-
                   </div>
-                   <div className="row">
-                    <Image src={'/email.png'} width={40} height={40} alt={'email'}/>
+                  <div className="row">
+                    <Image
+                      src={"/email.png"}
+                      width={40}
+                      height={40}
+                      alt={"email"}
+                    />
                     <p>kirsten.wigant@gmail.com</p>
-
                   </div>
                 </div>
-
               </div>
-              
             </div>
           );
         case "Education":
@@ -94,7 +99,7 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                   return (
                     <li key={i}>
                       <Image
-                        style={{marginRight: 12}}
+                        style={{ marginRight: 12 }}
                         width={e.width}
                         height={e.height}
                         src={e.src}
@@ -125,7 +130,6 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                         width={60}
                         alt="logo"
                         src={t.img}
-                        
                       />
                       <p className="tech-logos">{t.tech}</p>
                     </div>
@@ -144,7 +148,13 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                   return (
                     <Link className="next-link" href={p.path} key={i}>
                       <li className="clickable-li">
-                        <Image style={{marginRight: 12}} width={80} height={80} src={p.src} alt={p.alt} />
+                        <Image
+                          style={{ marginRight: 12 }}
+                          width={80}
+                          height={80}
+                          src={p.src}
+                          alt={p.alt}
+                        />
                         <div className="column">
                           <p className="degree">{p.title}</p>
                           <p className="school">{p.description}</p>
@@ -155,7 +165,14 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                   );
                 })}
               </ul>
-              <button className="primary-btn">View All (7)</button>
+
+              <Link
+                style={{ textDecoration: "none" }}
+                href={"/projects"}
+                className="primary-btn"
+              >
+                View All (7)
+              </Link>
             </div>
           );
         case "Career":
@@ -166,7 +183,13 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                 {career.map((p, i) => {
                   return (
                     <li key={i}>
-                      <Image style={{marginRight: 12}} width={60} height={60} src={p.src} alt={p.alt} />
+                      <Image
+                        style={{ marginRight: 12 }}
+                        width={60}
+                        height={60}
+                        src={p.src}
+                        alt={p.alt}
+                      />
                       <div className="column">
                         <p className="degree">{p.title}</p>
                         <p className="school">{p.description}</p>

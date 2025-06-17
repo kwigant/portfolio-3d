@@ -10,37 +10,19 @@ import Image from "next/image";
 export default function Profile() {
   const router = useRouter();
   const [tab, setTab] = useState(3);
-  const [backHover, setBackHover] = useState(false);
   const id = router.query.id;
   const profile = allProjectData.filter((pd: projectData) => {
     return pd.id === id || undefined;
   });
 
-  const handleNav = () => {
-    router.push("/");
-  };
-
   if (profile !== undefined && profile[0]) {
     return (
       <div style={{ overflow: "hidden", height: "100%" }}>
-        <Header activeTab={tab} setActiveTab={() => handleNav()} />
+        <Header back={true} home={true} activeTab={tab} setActiveTab={setTab} />
 
         <div className="layout">
           <aside>
-            <button
-              onMouseOver={() => setBackHover(true)}
-              onMouseOut={() => setBackHover(false)}
-              className="btn"
-              onClick={() => router.push("/")}
-            >
-              <Image
-                width={32}
-                height={32}
-                alt="back"
-                src={backHover ? "/arrow-pink.png" : "/arrow-black.png"}
-              />
-            </button>
-            <h3>All Projects</h3>
+           <h3>All Projects</h3>
             <ul>
               {allProjectData.map((d, i) => {
                 return (

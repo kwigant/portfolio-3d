@@ -1,73 +1,73 @@
 /* About Content Section */
 .outer-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .inner-container {
-    margin: 48px 0;
-    background-color: white;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+  margin: 48px 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .line {
-    width: 5px;
-    height: 200px;
-    background: #5BD2DC40;
+  width: 5px;
+  height: 200px;
+  background: #5bd2dc40;
 }
 
 .text-container {
-    display: flex;
-    flex-direction: column;
-    margin: 0 48px;
-    max-width: 660px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 48px;
+  max-width: 660px;
 }
 
 /* Contact Section */
 .contact-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 1150px;
-    margin: 48px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1150px;
+  margin: 48px 0;
 }
 
 .contact-item {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 /* Mobile View Styles */
-@media (max-width: 480px){
-    .outer-container {
-        margin: 48px 0;
-    }
-    
-    .inner-container {
-        margin: 0;
-        flex-direction: column;
-    }
+@media (max-width: 480px) {
+  .outer-container {
+    margin: 48px 0;
+  }
 
-    .contact-item {
-        flex-direction: column;
-        margin: 12px 0;
-    }
+  .inner-container {
+    margin: 0;
+    flex-direction: column;
+  }
 
-    .text-container {
-        margin: 0;
-    }
+  .contact-item {
+    flex-direction: column;
+    margin: 12px 0;
+  }
 
-    .contact-container {
-        margin:  0;
-    }
+  .text-container {
+    margin: 0;
+  }
+
+  .contact-container {
+    margin: 0;
+  }
 }
