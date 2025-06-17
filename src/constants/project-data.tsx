@@ -11,9 +11,12 @@ export const allProjectData: projectData[] = [
     description:
       "The website you are currently on has been designed and built by me! Designed through figma, built on React and hosted on Vercel for everyone in the world to view and get to know more about ~yours truly~",
     projectDetails: {
-      deliverables:
-        "<p>Have a responsive website available to the public that demonstrates who I am as both a developer and a designer.</p><br/><p>Showcase all my professional work over the years effectively and concisely as well as give an idea about who I am as a person.</p><br/><p>Display everything in a clean, usable, and enjoyable UI that is also mobile friendly</p>",
-      date: "June 2025 ",
+      deliverables: [
+        'Showcase all my professional work over the years effectively and concisely as well as give an idea about who I am as a person.',
+        'Have a responsive website available to the public that demonstrates who I am as both a developer and a designer',
+        'Display everything in a clean, usable, and enjoyable UI that is also mobile friendly'
+      ],
+      date: "June 2025",
       role: "Lead Designer & Developer",
       techStack: ["React + React Three.js", "NextJS", "TypeScript", "Vercel", "Blender + Figma"],
     },
@@ -65,8 +68,17 @@ export const allProjectData: projectData[] = [
     description:
       "A personal project of mine that allows you to visualize an ecosystem for your fish! Inspired by my want to own a fish paired with my lack of knowledge on how to properly care for one. This app helps you build an AR model of your fish tank and figure out optimal communal tank additions and conditions",
     projectDetails: {
-      deliverables:
-        "<p>Create an app that allows users to browse a database of aquarium fish and plants and add what they want to create their custom tank.</p><p>Stretch Goal: integrate AR so user can fully visualize their tank in their space!</p><p>Includes the following features: </p> <ul><li>CRUD operations on the tanks</li><li>Basic user account sign in / storage</li><li>Fish / plant profiles that can be added / removed from tank</li><li>Care instructions for personalized tank</li><ul>",
+      deliverables: [
+'Create an app that allows users to browse a database of aquarium fish and plants and add what they want to create their custom tank.',
+'Stretch Goal: integrate AR so user can fully visualize their tank in their space!',
+'Includes the following features:'
+      ],
+      subDeliverables: [
+'CRUD operations on the tanks',
+'Basic user account sign in / storage',
+'Fish / plant profiles that can be added / removed from tank',
+'Care instructions for personalized tank'
+      ],
       date: "November 2024 - February 2025",
       role: "Lead Designer & Developer",
       techStack: [
@@ -123,8 +135,12 @@ export const allProjectData: projectData[] = [
     description:
       "A personal project that allows you to identify any tarot card and get it’s associated meaning through AI image detection and text generation. Also includes a stretch goal of integrating AR to demonstrate your reading visually.",
     projectDetails: {
-      deliverables:
-        "<p>Use AI image detection to correctly obtain the name and description of the current tarot card  in the user’s phone camera.</p><br/><p>If multiple tarot cards are captured in the camera, use AI to generate a reading that builds off the descriptions of the cards</p><br/><p>Package it all in a usable and enjoyable UI!</p><br/><p>Stretch Goal: Generate an AR image that visualizes your card / reading.</p>",
+      deliverables: [
+'Use AI image detection to correctly obtain the name and description of the current tarot card  in the user’s phone camera.',
+'If multiple tarot cards are captured in the camera, use AI to generate a reading that builds off the descriptions of the cards',
+'Package it all in a usable and enjoyable UI!',
+'Stretch Goal: Generate an AR image that visualizes your card / reading.'
+      ],
       date: "February 2025 - Present",
       role: "Lead Interaction Designer & Developer",
       techStack: ["iOS - Swift", "Supabase", "Apple CoreML (AI Library)"],
@@ -164,8 +180,11 @@ export const allProjectData: projectData[] = [
     description:
       "An interface for Cisco customers / partners to gather insights across Cisco’s entire product portfolio. Featured enhanced analytics throughout the product’s lifecycle as well as permission based information access across clearance levels.",
     projectDetails: {
-      deliverables:
-        "<p>Collaborated with cross-functional teams to develop a design-accurate prototype for customer(CX) and partner(PX) portal demos; Usually under tight 1-3 month deadlines.</p><br/><p>Delivered 4-6 new web flow prototypes yearly, showcased to 16,000 in-person and 1M online attendees at Cisco Live (Cisco’s annual convention), receiving highly positive feedback.</p><br/><p>Implemented and aided in the task management of the front-end development and back-end API integration, collaborating with 12 designers and developers using SCRUM/agile methodologies.</p>",
+      deliverables: [
+        'Collaborated with cross-functional teams to develop a design-accurate prototype for customer(CX) and partner(PX) portal demos; Usually under tight 1-3 month deadlines.',
+        'Delivered 4-6 new web flow prototypes yearly, showcased to 16,000 in-person and 1M online attendees at Cisco Live (Cisco’s annual convention), receiving highly positive feedback.',
+        'Implemented and aided in the task management of the front-end development and back-end API integration, collaborating with 12 designers and developers using SCRUM/agile methodologies.'
+      ],
       date: "September 2020 - June 2024",
       role: "UX Engineer; XDI Team Member",
       techStack: [
@@ -208,8 +227,14 @@ export const allProjectData: projectData[] = [
     description:
       "An internal site intended to monitor of the various changes and updates within CX / PX Cloud. Powered by our own Content Management System (CMS) and Data Asset Management System (DAM), allowing designers and other admins to update XDStudio (and eventually other sites) as they see fit.",
     projectDetails: {
-      deliverables:
-        "<p>With a small team of 3, the goal was to: </p><br/><ul><li>Build a scalable CMS with React and AWS allowing for the creation and maintenance of internal sites.</li><li>Build a scalable Data Asset Management System which handles the storage of any media for the sites built using the CMS.</li><li>Using the CMS and DAM, create an internal blog site, based on given design specs, to keep track of updates on the customer and partner portals.</li></ul>",
+      deliverables:[
+        'With a small team of 3, the goal was to:'
+      ],
+      subDeliverables: [
+        'Build a scalable CMS with React and AWS allowing for the creation and maintenance of internal sites.',
+        'Build a scalable Data Asset Management System which handles the storage of any media for the sites built using the CMS.',
+        'Using the CMS and DAM, create an internal blog site, based on given design specs, to keep track of updates on the customer and partner portals.'
+      ],
       date: "January 2022 - December 2023",
       role: "UX Engineer; XDI Team Member",
       techStack: ["React", "TypeScript", "AWS", "REST APIs"],
@@ -245,8 +270,13 @@ export const allProjectData: projectData[] = [
     description:
       "A platform for both Cisco customers and partners to access information about all their Cisco products and services throughout Cisco’s portfolio. It included insights through data visualization, modular dashboard layouts, and AI assisted search functionality",
     projectDetails: {
-      deliverables:
-        "<p>Within the team, we were given 1 month to deliver a clickable prototype with the following features: </p><ul><li>Create a dashboard providing customers/ partners with product insights and AI-powered search (specs provided).</li><li>Allow users to access information specific to their products across the whole Cisco portfolio.</li></ul>",
+      deliverables: [
+'Within the team, we were given 1 month to deliver a clickable prototype with the following features:'
+      ],
+      subDeliverables: [
+        'Create a dashboard providing customers/ partners with product insights and AI-powered search (specs provided).',
+        'Allow users to access information specific to their products across the whole Cisco portfolio'
+      ],
       date: "August 2024 - September 2024",
       role: "UX Engineer; XDI Team Member",
       techStack: ["React", "TypeScript", "GraphQL"],
@@ -282,8 +312,12 @@ export const allProjectData: projectData[] = [
     description:
       "An ambitious personal project turned start-up - a social network dedicated to helping you with all your rental needs! From search, to sign, and beyond we are a platform dedicated to helping both renters and landlords throughout every step of the process.",
     projectDetails: {
-      deliverables:
-        "<p>Potential Tenants can search (either in a group or individually) for their future listing, apply, and hear back all on the site.</p><br/><p>Landlord and Tenant dedicated portals to help specific user types fulfill their needs.</p><br/><p>Tenants and landlords can each view their current rental and manage any household chores / notifications / messages between housing group and/or landlord.</p><br/><p>Stretch Goal: referral system for tenants to recommend other tenants to a property with hopes of mitigating landlord struggle of filling a place quickly.</p>",
+      deliverables: [
+        'Potential Tenants can search (either in a group or individually) for their future listing, apply, and hear back all on the site',
+        'Landlord and Tenant dedicated portals to help specific user types fulfill their needs',
+        'Tenants and landlords can each view their current rental and manage any household chores / notifications / messages between housing group and/or landlord',
+        'Stretch Goal: referral system for tenants to recommend other tenants to a property with hopes of mitigating landlord struggle of filling a place quickly'
+      ],
       date: "April 2019 - March 2024",
       role: "CEO, Co-Founder, Lead Frontend Engineer & Designer, Head of Finance & Business Operations, Recruiter & Trainer",
       techStack: ["React", "TypeScript", "GraphQL"],

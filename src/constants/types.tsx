@@ -32,7 +32,8 @@ export type projectLink = {
 }
 
 export type projectDetails = {
-    deliverables: string;
+    deliverables: string[];
+    subDeliverables?: string[];
     date: string;
     role: string;
     techStack: string[];

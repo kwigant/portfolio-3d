@@ -43,7 +43,7 @@ export default function Popup({ name, position, onClose }: PopupProps) {
         if (position.height === "450px" ) return "popup-400-r";
 
         return "popup-400-l";
-      case "1000px":
+      case "850px":
         return "popup-850";
       case "600px":
         return "popup-500";
@@ -55,41 +55,34 @@ export default function Popup({ name, position, onClose }: PopupProps) {
       switch (name) {
         case "Contact":
           return (
-            <div className="justified-row">
-              <aside>
-                <div className="img"></div>
-
+            <div className="row">
+               <div className="img"></div>
+              <div className="column" style={{width: '100%'}}>
                 <h3>Let&apos;s Get in Touch</h3>
                 <p className="subtitle">
-                  I&apos;m available for freelance work!
+                  I&apos;m currently available for freelance work!
+
+
+                </p>
+                <p>
+                 Whether you need a website, an app, or just have questions about my work, feel free to reach out. I handle both design and development and would love to hear from you.
                 </p>
 
-                <p>
-                  Need a website or app? I&apos;ve got design and development
-                  covered - drop me a message :)
-                </p>
-              </aside>
-              <main>
-                <div className="justified-row">
-                  <h3>Send an Email</h3>
-                  <Link className="expand-link" href={"/contact"}>
-                    Expand
-                    <Image
-                      style={{ marginLeft: 8 }}
-                      src={"/expand.png"}
-                      width={24}
-                      height={24}
-                      alt={"expand"}
-                    />
-                  </Link>
+                <div className="row">
+                  <div className="row">
+                    <Image src={'/linkedin.png'} width={40} height={40} alt={'linkedin'}/>
+                    <p>LinkedIn</p>
+
+                  </div>
+                   <div className="row">
+                    <Image src={'/email.png'} width={40} height={40} alt={'email'}/>
+                    <p>kirsten.wigant@gmail.com</p>
+
+                  </div>
                 </div>
-                <input disabled value={toEmail}></input>
-                <input placeholder={"your-email@email.com"}></input>
-                <textarea placeholder={"email"}></textarea>
-                <div className="end-row">
-                  <button className="primary-btn">Send</button>
-                </div>
-              </main>
+
+              </div>
+              
             </div>
           );
         case "Education":
@@ -145,7 +138,7 @@ export default function Popup({ name, position, onClose }: PopupProps) {
         case "Projects":
           return (
             <div className="column">
-              <h2>Projects</h2>
+              <h2>Latest Projects</h2>
               <ul>
                 {projects.map((p, i) => {
                   return (

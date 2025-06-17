@@ -55,10 +55,10 @@ const Home: React.FC = () => {
           <Popup
             name={"Contact"}
             position={{
-              top: "45%",
-              left: "15%",
-              width: "1000px",
-              height: "400px",
+              top: "65%",
+              left: "20%",
+              width: "850px",
+              height: "250px",
             }}
             onClose={() => setTab(-1)}
           />
