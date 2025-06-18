@@ -37,7 +37,7 @@ const Home: React.FC = () => {
               top: "35%",
               left: "4%",
               width: "400px",
-              height: "325px",
+              height: "350px",
             }}
             onClose={() =>closePopup()}
           />
@@ -84,7 +84,7 @@ const Home: React.FC = () => {
               top: "27%",
               left: "65%",
               width: "400px",
-              height: "450px",
+              height: "425px",
             }}
             name={"Projects"}
             onClose={() => closePopup()}

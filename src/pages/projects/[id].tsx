@@ -20,7 +20,7 @@ export default function Profile() {
 
         <div className="layout">
           <aside>
-           <h3>All Projects</h3>
+            <h3>All Projects</h3>
             <ul>
               {allProjectData.map((d, i) => {
                 return (
@@ -40,32 +40,29 @@ export default function Profile() {
             </ul>
           </aside>
           <main>
-            <div
-              className="center-container"
-              style={{ justifyContent: "center" }}
-            >
+            <div className="row" style={{alignItems: 'flex-end'}}>
               <Image
                 width={150}
                 height={150}
                 alt="zen-tank"
                 src={profile[0].img}
               />
-              <h1>{profile[0].title}</h1>
-              <div className="row">
-                {profile[0].projectDetails &&
-                  profile[0].projectDetails.techStack &&
-                  profile[0].projectDetails.techStack.map((t, i) => (
-                    <div
-                      key={i}
-                      className="tag"
-                    >
-                      {t}
-                    </div>
-                  ))}
+
+              <div className="column">
+                <h1 style={{marginLeft: 12}}>{profile[0].title}</h1>
+                <div className="row">
+                  {profile[0].projectDetails &&
+                    profile[0].projectDetails.techStack &&
+                    profile[0].projectDetails.techStack.map((t, i) => (
+                      <div key={i} className="tag">
+                        {t}
+                      </div>
+                    ))}
+                </div>
               </div>
             </div>
 
-            <p>{profile[0].description}</p>
+            <p style={{marginTop: 32}}>{profile[0].description}</p>
             <div className="details-grid">
               <div className="column">
                 <div className={"date"}>

@@ -13,7 +13,7 @@ type PopupProps = {
 export default function Popup({ name, position, onClose }: PopupProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [showContent, setShowContent] = useState(false);
-  
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (ref.current && !ref.current.contains(event.target as Node)) {
@@ -40,7 +40,7 @@ export default function Popup({ name, position, onClose }: PopupProps) {
       case "400px":
         if (position.height === "250px") return "popup-250-h";
         if (position.height === "320px") return "popup-400-r";
-        if (position.height === "450px") return "popup-400-r";
+        if (position.height === "425px") return "popup-400-r";
 
         return "popup-400-l";
       case "850px":
@@ -151,8 +151,8 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                       <li className="clickable-li">
                         <Image
                           style={{ marginRight: 12 }}
-                          width={80}
-                          height={80}
+                          width={100}
+                          height={100}
                           src={p.src}
                           alt={p.alt}
                         />
@@ -186,8 +186,8 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                     <li key={i}>
                       <Image
                         style={{ marginRight: 12 }}
-                        width={60}
-                        height={60}
+                        width={80}
+                        height={80}
                         src={p.src}
                         alt={p.alt}
                       />

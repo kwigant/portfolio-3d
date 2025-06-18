@@ -312,3 +312,26 @@ h3 {
   max-width: 1100px;
   margin-bottom: 80px;
 }
+
+.abt-column {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+}
+
+.left-img {
+  margin-right: 50px;
+}
+
+.right-img {
+  margin-left: 50px;
+}
+
+
+strong {
+  color:rgb(251, 129, 113);
+}
+
+a {
+  text-decoration-color: rgb(251, 129, 113);;
+}
