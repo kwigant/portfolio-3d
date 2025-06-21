@@ -89,7 +89,7 @@ export const devData: projectList[] = [
                 img: '/visuals/houseme-logo.svg',
                 description: 'An ambitious personal project turned start-up - a social network dedicated to helping you with all your rental needs! From search, to sign, and beyond we are a platform dedicated to helping both renters and landlords throughout every step of the process.',
                 tags: [
-                    'React', 'Supabase', 'GraphQL'
+                    "React", "NextJS", "GraphQL", "Axios", "mySQL"
                 ]
             }
         ]

@@ -320,7 +320,7 @@ export const allProjectData: projectData[] = [
       ],
       date: "April 2019 - March 2024",
       role: "CEO, Co-Founder, Lead Frontend Engineer & Designer, Head of Finance & Business Operations, Recruiter & Trainer",
-      techStack: ["React", "TypeScript", "GraphQL"],
+      techStack: ["React", "NextJS", "GraphQL", "Axios", "mySQL"],
     },
     // approach: [
     //   {
