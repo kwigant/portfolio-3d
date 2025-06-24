@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import { devData } from "@/constants/project-list-data";
 import "../styles/Projects.css";
+import "../styles/globals.scss";
+import "../styles/Header.css";
 import Image from "next/image";
 import Link from "next/link";
 export default function Projects() {
@@ -18,24 +20,25 @@ export default function Projects() {
         >
           <h2
             style={{
-              marginLeft: 0,
-              textAlign: "center",
+              margin: 0,
+              marginBottom: 24
             }}
           >
             {d.title}
           </h2>
           {d.list.map((d, i) => (
             <Link href={d.path} className="project-list-item" key={i}>
-              <Image src={d.img} width={100} height={100} alt={d.title} />
+              <Image src={d.img} width={200} height={200} alt={d.title} />
 
-              <div className="column">
+              <div className="column hover-underline-animation" style={{marginLeft: 24}}>
                 <h3>{d.title}</h3>
-                <div>{d.subtitle}</div>
+                
                 <div className="row">
                   {d.tags.map((t, i) => (
                     <div className="tag" key={i}>{t}</div>
                   ))}
                 </div>
+                <p>{d.subtitle}</p>
               </div>
             </Link>
           ))}

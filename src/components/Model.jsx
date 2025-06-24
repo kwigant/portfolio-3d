@@ -8,9 +8,11 @@ Command: npx gltfjsx@6.5.3 latest-portfolio.glb
 import React, { useRef, useState } from 'react'
 import { useGLTF, OrthographicCamera, PerspectiveCamera } from '@react-three/drei'
 import { useFrame, useThree } from '@react-three/fiber'
+import { useRouter } from "next/navigation";
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/latest-portfolio.glb')
+  const router = useRouter()
     // const catHeadRef = useRef()
   // const { mouse, camera } = useThree()
 
@@ -29,8 +31,8 @@ export default function Model(props) {
   return (
     <group {...props}  rotation={[0, Math.PI, 0]} dispose={null}>
       <OrthographicCamera makeDefault={true} zoom={75} far={1000} near={0.1} position={[-1.699, 10.565, -11.704]} rotation={[-2.944, -0.173, -3.107]} />
-      <mesh geometry={nodes.monitor.geometry} material={materials['monitor-material']} position={[-0.86, 6.013, 6.498]} scale={[1.56, 1.024, 0.16]} />
-      <mesh geometry={nodes.Cube001.geometry} material={materials['white-board-material']} position={[-3.85, 9.001, 7.148]} scale={[1.635, 2.379, 0.065]} />
+      <mesh   geometry={nodes.monitor.geometry} material={materials['monitor-material']} position={[-0.86, 6.013, 6.498]} scale={[1.56, 1.024, 0.16]} />
+      <mesh  geometry={nodes.Cube001.geometry} material={materials['white-board-material']} position={[-3.85, 9.001, 7.148]} scale={[1.635, 2.379, 0.065]} />
       <mesh geometry={nodes.Blinds.geometry} material={materials['blinds-material']} position={[1.969, 10.709, 6.972]} rotation={[0.005, -0.001, -0.002]} scale={[3.455, 0.494, 0.137]} />
       <mesh geometry={nodes.Sphere006.geometry} material={materials['cat-body']} position={[4.402, 6.726, 7.701]} rotation={[0, 0, 0.387]} scale={[0.922, 0.686, 0.615]} />
       <mesh geometry={nodes.BézierCurve.geometry} material={materials['cat-tail']} position={[4.603, 6.243, 7.412]} rotation={[0, 0, 0.053]} scale={0.644} />
@@ -74,10 +76,12 @@ export default function Model(props) {
         <mesh geometry={nodes.Cube2257_5.geometry} material={materials['red-key-material']} />
         <mesh geometry={nodes.Cube2257_6.geometry} material={materials['green-key-material']} />
         <mesh geometry={nodes.Cube2257_7.geometry} material={materials['desk-material']} />
-        <mesh geometry={nodes.Cube2257_8.geometry} material={materials['book-4-material']} />
-        <mesh geometry={nodes.Cube2257_9.geometry} material={materials['book-3-material']} />
-        <mesh geometry={nodes.Cube2257_10.geometry} material={materials['book-1-material']} />
-        <mesh geometry={nodes.Cube2257_11.geometry} material={materials['book-2-material']} />
+        <group >
+          <mesh geometry={nodes.Cube2257_8.geometry} material={materials['book-4-material']} />
+          <mesh geometry={nodes.Cube2257_9.geometry} material={materials['book-3-material']} />
+          <mesh geometry={nodes.Cube2257_10.geometry} material={materials['book-1-material']} />
+          <mesh geometry={nodes.Cube2257_11.geometry} material={materials['book-2-material']} />
+        </group>
       </group>
       <mesh geometry={nodes['cat-head003'].geometry} material={materials['cat-head']} position={[3.254, 6.918, 7.473]} rotation={[0.052, -0.778, 0.502]} scale={[-0.127, -0.155, -0.137]} />
       <mesh geometry={nodes['cat-head008'].geometry} material={materials['cat-pupils']} position={[3.254, 6.918, 7.473]} rotation={[0.052, -0.778, 0.502]} scale={[-0.127, -0.155, -0.137]} />

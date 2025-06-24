@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/Header.css";
+import "../styles/globals.scss";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -25,7 +26,7 @@ export default function Header(props: HeaderProps) {
     else return "link";
   }
   return (
-    <header style={{ justifyContent: props.back ? "center" : "space-evenly" }}>
+    <header style={{ justifyContent: props.back ? "center" : "space-evenly", alignItems: 'center' }}>
       {!props.back && (
         <h4
           onClick={() => setTabByURL("career")}

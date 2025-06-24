@@ -4,34 +4,12 @@ export const devData: projectList[] = [
     {
         title: "Most Recent Projects",
         list: [
-            {
-                id: 'zen-tank',
-                path: '/projects/zen-tank',
-                title: 'Zen Tank',
-                img: '/visuals/zen-tank.svg',
-                subtitle: 'A personal project of mine that allows you to visualize an ecosystem for your fish! Inspired by my want to own a fish paired with my lack of knowledge on how to properly care for one. This app helps you build an AR model of your fish tank and figure out optimal communal tank additions and conditions',
-                description: 'An iOS and Android app that allows you to visualize an ecosystem for your fish! Build an AR model of your fish tank and figure out optimal communal tank additions and conditions for your own custom aquascape.',
-                tags: [
-                    'React Native', 'Supabase', 'Figma'
-                ]
-            },
-            {   
-                id: 'tarot-ai',
-                path: '/projects/tarot-ai',
-                title: 'Tarot AI',
-                subtitle: 'A personal project that allows you to identify any tarot card and get it’s associated meaning through AI image detection and text generation. Also includes a stretch goal of integrating AR to demonstrate your reading visually.',
-                img: '/visuals/tarot-ai.svg',
-                description: 'An iOS app that allows you to identify any tarot card and get it’s associated meaning through AI image detection and text generation, with the ultimate goal of integrating AR to demonstrate your reading visually.',
-                tags: [
-                    'React Native', 'TensorFlow.js', 'TeachableMachine', 'Node.js', 
-                ]
-            },
-            {
+              {
                 id: 'portfolio',
                 path: '/projects/portfolio',
                 title: 'My Portfolio',
                 img: '/visuals/portfolio-3d.svg',
-                description: 'The website you are currently on has been designed and built by me! Designed through figma, built on React and hosted on Vercel for everyone in the world to view and get to know more about ~yours truly~',
+                description: 'This website - from concept to code - was fully created by me. Crafted using Figma and Blender, developed with React and Next.js, and deployed on Vercel for all to see!',
                
                 subtitle: 'The website you are currently on has been designed and built by me! Designed through figma, built on React and hosted on Vercel for everyone in the world to view and get to know more about ~yours truly~',
 
@@ -39,6 +17,29 @@ export const devData: projectList[] = [
                     'React', 'NextJS', 'TypeScript', 'Three.js'
                 ]
             },
+            {   
+                id: 'tarot-ai',
+                path: '/projects/tarot-ai',
+                title: 'Tarot AI',
+                subtitle: 'A proof-of-concept React Native app that uses AI to identify any tarot card and provide its most likely associated meaning.',
+                img: '/visuals/tarot-ai.svg',
+                description: 'An iOS app that allows you to identify any tarot card and get it’s associated meaning through AI image detection and text generation, with the ultimate goal of integrating AR to demonstrate your reading visually.',
+                tags: [
+                    'React Native', 'TensorFlow.js', 'TeachableMachine', 'Node.js', 
+                ]
+            },
+            {
+                id: 'zen-tank',
+                path: '/projects/zen-tank',
+                title: 'Zen Tank',
+                img: '/visuals/zen-tank.svg',
+                subtitle: 'A React Native App designed to help plan and visualize a healthy aquarium ecosystem for your fish tank!',
+                description: 'An iOS and Android app that allows you to visualize an ecosystem for your fish! Build an AR model of your fish tank and figure out optimal communal tank additions and conditions for your own custom aquascape.',
+                tags: [
+                    'React Native', 'Supabase', 'Figma'
+                ]
+            },
+            
         ]
     },
     {

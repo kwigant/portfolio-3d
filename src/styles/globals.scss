@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+
+.container {
+  display: flex;
+  margin: 48px 64px 24px 64px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+}
+
+body {
+  color: var(--foreground);
+ 
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-family: "Funnel Display", sans-serif;
+}
+
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.justified-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+/* 
+Header: 50px
+SubHeader: 35px
+Body: 18px
+Body large: 20px
+Secondary: 16px
+Tertiary: 14px all caps
+*/
+
+.font {
+    font-family: "Funnel Display", sans-serif;
+}
+
+h1 {
+  @extend .font;
+
+  font-size: 45px;
+}
+
+h2 {
+  @extend .font;
+
+  font-size: 32px;
+}
+
+h3 {
+  @extend .font;
+
+  font-size: 24px;
+}
+
+h4 {
+  @extend .font;
+
+  font-size: 20px;
+  font-weight: 200;
+}
+
+p {
+  @extend .font;
+
+  font-size: 18px;
+}
+
+.small-text {
+  @extend .font;
+
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  padding: 4px 0 0 0;
+  margin: 0;
+}
+
+.btn {
+    outline: none;
+    background: none;
+}

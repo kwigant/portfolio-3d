@@ -5,29 +5,14 @@ import { useRouter } from "next/router";
 import "../../styles/Projects.css";
 import Link from "next/link";
 import Image from "next/image";
-import ImageGallery from "react-image-gallery";
-// import stylesheet if you're not already using CSS @import
-import "react-image-gallery/styles/css/image-gallery.css";
+import ImageGallery from "@/components/ImageGallery";
+
 export default function Profile() {
   const router = useRouter();
   const id = router.query.id;
   const profile = allProjectData.filter((pd: projectData) => {
     return pd.id === id || undefined;
   });
-  const images = [
-  {
-    original: "https://picsum.photos/id/1018/1000/600/",
-    thumbnail: "https://picsum.photos/id/1018/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1015/1000/600/",
-    thumbnail: "https://picsum.photos/id/1015/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-];
 
   if (profile !== undefined && profile[0]) {
     return (
@@ -56,16 +41,16 @@ export default function Profile() {
             </ul>
           </aside>
           <main>
-            <div className="row" style={{alignItems: 'flex-end'}}>
+            <div className="row" style={{ marginTop: 24,alignItems: "flex-end" }}>
               <Image
-                width={150}
-                height={150}
+                width={200}
+                height={200}
                 alt="zen-tank"
                 src={profile[0].img}
               />
 
-              <div className="column">
-                <h1 style={{marginLeft: 12}}>{profile[0].title}</h1>
+              <div className="column" style={{marginLeft: 24}}>
+                <h2 style={{ marginBottom: 12 }}>{profile[0].title}</h2>
                 <div className="row">
                   {profile[0].projectDetails &&
                     profile[0].projectDetails.techStack &&
@@ -75,10 +60,9 @@ export default function Profile() {
                       </div>
                     ))}
                 </div>
+                <p style={{margin: 0, marginTop: 12, maxWidth: 700, letterSpacing: .2}}>{profile[0].description}</p>
               </div>
             </div>
-
-            <p style={{marginTop: 32}}>{profile[0].description}</p>
             <div className="details-grid">
               <div className="column">
                 <div className={"date"}>
@@ -98,13 +82,18 @@ export default function Profile() {
                   {profile[0].projectDetails.deliverables.map((d, i) => {
                     return <p key={i}>{d}</p>;
                   })}
+                  {profile[0].projectDetails.subDeliverables && (
+                    <ul>
+                      {profile[0].projectDetails.subDeliverables.map((d, i) => {
+                        return <li key={i}>{d}</li>;
+                      })}
+                    </ul>
+                  )}
                 </div>
               </div>
             </div>
-             <h3 style={{marginTop: 24}}>Visuals</h3>
-            <p style={{marginTop: 32, marginBottom: 32}}>{profile[0].description}</p>
-
-            <ImageGallery items={images} />
+          
+            <ImageGallery images={profile[0].projectDetails.images} />
           </main>
         </div>
       </div>

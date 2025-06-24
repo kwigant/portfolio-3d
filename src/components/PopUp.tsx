@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/PopUp.css";
+import "../styles/globals.scss";
+import "../styles/Header.css";
 import Image from "next/image";
 import { career, education, projects, tech } from "@/constants/popup-data";
 import Link from "next/link";
@@ -55,37 +57,47 @@ export default function Popup({ name, position, onClose }: PopupProps) {
       switch (name) {
         case "Contact":
           return (
-            <div className="row">
-              <div className="img"></div>
-              <div className="column" style={{ width: "100%" }}>
-                <h3>Let&apos;s Get in Touch</h3>
-                <p className="subtitle">
-                  I&apos;m currently available for freelance work!
-                </p>
-                <p>
-                  Whether you need a website, an app, or just have questions
-                  about my work, feel free to reach out. I handle both design
-                  and development and would love to hear from you.
-                </p>
-
-                <div className="row">
+            <div>
+              <h2>Let&apos;s Get in Touch</h2>
+              <div className="row" style={{ alignItems: "flex-start" }}>
+                <Image
+                  alt="portrait"
+                  style={{borderRadius: 8,}}
+                  height={200}
+                  width={200}
+                  src={"/visuals/kw-pic.svg"}
+                />
+                <div
+                  className="column"
+                  style={{ marginLeft: 24, width: "100%" }}
+                >
+                  <p className="subtitle">
+                    I&apos;m currently available for freelance work!
+                  </p>
+                  <p>
+                    Whether you need a website, an app, or just have questions
+                    about my work, feel free to reach out. I handle both design
+                    and development and would love to hear from you.
+                  </p>
                   <div className="row">
-                    <Image
-                      src={"/linkedin.png"}
-                      width={40}
-                      height={40}
-                      alt={"linkedin"}
-                    />
-                    <p>LinkedIn</p>
-                  </div>
-                  <div className="row">
-                    <Image
-                      src={"/email.png"}
-                      width={40}
-                      height={40}
-                      alt={"email"}
-                    />
-                    <p>kirsten.wigant@gmail.com</p>
+                    <div className="row">
+                      <Image
+                        src={"/icons/linkedin.png"}
+                        width={40}
+                        height={40}
+                        alt={"linkedin"}
+                      />
+                      <p style={{ marginLeft: 8, marginRight: 24 }}>LinkedIn</p>
+                    </div>
+                    <div className="row">
+                      <Image
+                        src={"/icons/email.png"}
+                        width={40}
+                        height={40}
+                        alt={"email"}
+                      />
+                      <p style={{ marginLeft: 8 }}>kirsten.wigant@gmail.com</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -100,9 +112,9 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                   return (
                     <li key={i}>
                       <Image
-                        style={{ marginRight: 12 }}
-                        width={e.width}
-                        height={e.height}
+                        style={{borderRadius: 8, marginRight: 12 }}
+                        width={100}
+                        height={100}
                         src={e.src}
                         alt={e.alt}
                       />
@@ -126,13 +138,13 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                   return (
                     <div key={i} className="tech-container">
                       <Image
-                        style={{ borderRadius: 8, marginRight: 12 }}
+                        style={{ borderRadius: 8, }}
                         height={60}
                         width={60}
                         alt="logo"
                         src={t.img}
                       />
-                      <p className="tech-logos">{t.tech}</p>
+                      <p className="small-text">{t.tech}</p>
                     </div>
                   );
                 })}
@@ -150,13 +162,13 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                     <Link className="next-link" href={p.path} key={i}>
                       <li className="clickable-li">
                         <Image
-                          style={{ marginRight: 12 }}
+                          style={{borderRadius: 8, marginRight: 12 }}
                           width={100}
                           height={100}
                           src={p.src}
                           alt={p.alt}
                         />
-                        <div className="column">
+                        <div className="column hover-underline-animation">
                           <p className="degree">{p.title}</p>
                           <p className="school">{p.description}</p>
                           <p className="date">{p.date}</p>
@@ -170,7 +182,7 @@ export default function Popup({ name, position, onClose }: PopupProps) {
               <Link
                 style={{ textDecoration: "none" }}
                 href={"/projects"}
-                className="primary-btn"
+                className="secondary-btn"
               >
                 View All (7)
               </Link>
@@ -185,9 +197,9 @@ export default function Popup({ name, position, onClose }: PopupProps) {
                   return (
                     <li key={i}>
                       <Image
-                        style={{ marginRight: 12 }}
-                        width={80}
-                        height={80}
+                        style={{ borderRadius: 8,marginRight: 12 }}
+                        width={100}
+                        height={100}
                         src={p.src}
                         alt={p.alt}
                       />

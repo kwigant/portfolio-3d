@@ -38,10 +38,17 @@ export type projectDetails = {
     role: string;
     techStack: string[];
     designStack?: string[];
+    images: Gallery[];
 };
 
 
 type more = {
     description: string;
     links?: projectLink[]
+}
+
+export type Gallery =  {
+    src: string;
+    description: string;
+    title: string;
 }

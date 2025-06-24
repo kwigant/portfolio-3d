@@ -1,7 +1,10 @@
 <svg width="340" height="340" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="340" height="340" rx="8" fill="#FE9689" fill-opacity="0.2"/>
+<rect width="340" height="340" rx="8" fill="#FE9689"/>
+<path d="M168.571 276.258L81.7414 226.188L82.2378 127.148L168.571 176.721V276.258Z" fill="#B6A9C0" stroke="white" stroke-width="4"/>
 <path d="M168.57 272.717L84.5438 224.263L85.0242 128.747L168.57 176.721V272.717Z" fill="#B6A9C0" stroke="white" stroke-width="4"/>
+<rect x="1.73205" y="1" width="98.4191" height="99.1455" transform="matrix(0.866025 -0.5 0 1 170.535 176.93)" fill="#FFD8BA" stroke="white" stroke-width="4"/>
 <rect x="1.73205" y="1" width="95.3042" height="96" transform="matrix(0.866025 -0.5 0 1 170.535 176.93)" fill="#FFD8BA" stroke="white" stroke-width="4"/>
+<rect x="3.4641" width="98.2978" height="99.904" transform="matrix(0.866025 -0.5 0.866025 0.5 80.9641 125.903)" fill="#FE9689" stroke="white" stroke-width="4"/>
 <rect x="3.4641" width="95.3674" height="96.4083" transform="matrix(0.866025 -0.5 0.866025 0.5 83.7666 127.796)" fill="#FE9689" stroke="white" stroke-width="4"/>
 <path d="M173.801 178.105L252.801 132.616V158.605L220.302 178.105L173.801 204.105V178.105Z" fill="#767272"/>
 <path d="M166.801 177.606L86.301 131.188V158.402L166.801 203.743V177.606Z" fill="#767272"/>

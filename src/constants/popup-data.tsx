@@ -21,19 +21,21 @@
   ];
  
   export const tech = [
-    {tech: 'React + React Native', img: '/tech-logos/react.svg'},
-    {tech: 'Angular', img: '/tech-logos/angular.svg'},
-    {tech: 'Supabase', img: '/tech-logos/supabase.svg'},
-    {tech: 'PostgresQL', img: '/tech-logos/postgresql.svg'},
-    {tech: 'GraphQL', img: '/tech-logos/graphql.svg'},
-    {tech: 'Node.js + Express', img: '/tech-logos/node.svg'},
-    {tech: 'TypeScript', img: '/tech-logos/typescript.svg'},
-    {tech: 'JavaScript', img: '/tech-logos/javascript.svg'},
-    {tech: 'TensorFlow.js', img: '/tech-logos/tensorflow.svg'},
-    {tech: 'Adobe Illustrator', img: '/tech-logos/illustrator.svg'},
-    {tech: 'Three.js', img: '/tech-logos/threejs.svg'},
-    {tech: 'Figma', img: '/tech-logos/figma.svg'},
-    {tech: 'Blender', img: '/tech-logos/blender.svg'},
+    {tech: 'React + React Native', img: '/tech/react.svg'},
+    {tech: 'Angular', img: '/tech/angular.svg'},
+    {tech: 'Supabase', img: '/tech/supabase.svg'},
+    {tech: 'PostgresQL', img: '/tech/postgresql.svg'},
+    {tech: 'GraphQL', img: '/tech/graphql.svg'},
+    {tech: 'Node.js + Express', img: '/tech/nodejs.svg'},
+    {tech: 'JavaScript', img: '/tech/javascript.svg'},
+
+    {tech: 'TypeScript', img: '/tech/typescript.svg'},
+    {tech: 'TensorFlow.js', img: '/tech/tensorflow.svg'},
+    {tech: 'Adobe Illustrator', img: '/tech/adobe.svg'},
+    {tech: 'Three.js', img: '/tech/threejs.svg'},
+    {tech: 'Figma', img: '/tech/figma.svg'},
+    {tech: 'Blender', img: '/tech/blender.svg'},
+    {tech: 'Vercel', img: '/tech/vercel.svg'},
 
   ];
 
@@ -69,10 +71,10 @@ export const projects = [
 
 export const career = [
     {
-      src: "/visuals/ucsc-logo.jpeg",
+      src: "/visuals/freelancing.svg",
       alt: "freelance",
       title: "Freelance Web & Mobile Developer",
-      description: "Self-Employed",
+      description: "Kirsten Wigant Dev Studio",
       date: "June 2025 - Present"
     },
      {

@@ -2,7 +2,7 @@
 
 // src/App.tsx
 import React, { useEffect, useState } from "react";
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import Header from "@/components/Header";
 import Popup from "@/components/PopUp";
 import CanvasModel from "@/components/Canvas";
@@ -34,10 +34,10 @@ const Home: React.FC = () => {
           <Popup
             name={"Career"}
             position={{
-              top: "35%",
+              top: "30%",
               left: "4%",
               width: "400px",
-              height: "350px",
+              height: "400px",
             }}
             onClose={() =>closePopup()}
           />
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
               top: "18%",
               left: "7%",
               width: "400px",
-              height: "250px",
+              height: "275px",
             }}
             onClose={() => closePopup()}
           />
@@ -58,10 +58,10 @@ const Home: React.FC = () => {
           <Popup
             name={"Technologies"}
             position={{
-              top: "45%",
+              top: "30%",
               left: "52%",
               width: "600px",
-              height: "320px",
+              height: "350px",
             }}
             onClose={() => closePopup()}
           />
@@ -70,7 +70,7 @@ const Home: React.FC = () => {
           <Popup
             name={"Contact"}
             position={{
-              top: "65%",
+              top: "60%",
               left: "20%",
               width: "850px",
               height: "250px",
@@ -81,10 +81,10 @@ const Home: React.FC = () => {
         {tab === 'projects' && (
           <Popup
             position={{
-              top: "27%",
+              top: "25%",
               left: "65%",
               width: "400px",
-              height: "425px",
+              height: "460px",
             }}
             name={"Projects"}
             onClose={() => closePopup()}
