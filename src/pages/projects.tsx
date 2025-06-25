@@ -1,14 +1,13 @@
 import Header from "@/components/Header";
 import { devData } from "@/constants/project-list-data";
-import "../styles/Projects.css";
+import "../styles/Projects.scss";
 import "../styles/globals.scss";
 import "../styles/Header.css";
 import Image from "next/image";
 import Link from "next/link";
 export default function Projects() {
-
   return (
-    <div >
+    <div>
       <Header back={true} />
       {devData.map((d, i) => (
         <div
@@ -21,7 +20,7 @@ export default function Projects() {
           <h2
             style={{
               margin: 0,
-              marginBottom: 24
+              marginBottom: 24,
             }}
           >
             {d.title}
@@ -30,12 +29,17 @@ export default function Projects() {
             <Link href={d.path} className="project-list-item" key={i}>
               <Image src={d.img} width={200} height={200} alt={d.title} />
 
-              <div className="column hover-underline-animation" style={{marginLeft: 24}}>
+              <div
+                className="column hover-underline-animation"
+                style={{ marginLeft: 24 }}
+              >
                 <h3>{d.title}</h3>
-                
+
                 <div className="row">
                   {d.tags.map((t, i) => (
-                    <div className="tag" key={i}>{t}</div>
+                    <div className="tag" key={i}>
+                      {t}
+                    </div>
                   ))}
                 </div>
                 <p>{d.subtitle}</p>

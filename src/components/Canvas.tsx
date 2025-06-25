@@ -2,16 +2,16 @@ import { Center } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import Model from "./Model";
+import "../styles/globals.scss";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 export default function CanvasModel() {
+  const {width} = useWindowDimensions()
   return (
     <Canvas
       shadows={true}
-      style={{
-        backgroundColor: "#FFE8CC",
-        height: "75vh",
-        boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
-      }}
+      className="canvas"
+      style={{height: width > 500 ? "75vh" : 300 }}
     >
       <hemisphereLight args={["#CB9FCD", "#3529A9", 4]} />
       <pointLight

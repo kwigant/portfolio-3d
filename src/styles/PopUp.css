@@ -189,7 +189,7 @@ li {
   margin-bottom: 32px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .clickable-li {
@@ -200,20 +200,21 @@ li {
 .flex-end {
   justify-content: flex-end;
 }
+
 .degree {
   margin: 0;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .school {
   margin: 0;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .date {
   margin: 4px 0;
-  font-size: 16px;
+  font-size: 14px;
   font-style: italic;
   font-weight: 100;
   color: #00000070;
@@ -298,4 +299,10 @@ textarea {
   border-radius: 8px;
   background-color: gray;
   margin-right: 12px;
+}
+
+@media (max-width: 500px) {
+  .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+  }
 }

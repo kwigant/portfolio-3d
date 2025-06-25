@@ -32,7 +32,7 @@ header {
   }
 
   &:hover {
-    color: #F06A6A;
+    color: #f06a6a;
     cursor: pointer;
   }
 }
@@ -47,13 +47,13 @@ header {
 
   &:hover {
     font-weight: bold;
-    color: #F06A6A;
+    color: #f06a6a;
   }
 }
 
 .link-active {
   font-weight: bold !important;
-  color: #F06A6A !important;
+  color: #f06a6a !important;
 }
 
 .hover-underline-animation {
@@ -69,7 +69,7 @@ header {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #F06A6A;
+  background-color: #f06a6a;
   transition: transform 0.25s ease-out;
 }
 
@@ -98,7 +98,6 @@ header {
   cursor: pointer;
 }
 
-
 .desk-link {
   position: absolute;
   right: 48px;
@@ -106,6 +105,31 @@ header {
   border: none;
   background: transparent;
   cursor: pointer;
+}
 
- 
+.menu {
+  position: absolute;
+  top: 75px;
+  right: 0;
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+@media (max-width: 500px) {
+  header {
+    margin: 0;
+    padding: 12px 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .name-container {
+    text-align: left;
+    align-items: flex-start;
+  }
 }

@@ -4,91 +4,40 @@
 import React, { useEffect, useState } from "react";
 import "../styles/globals.scss";
 import Header from "@/components/Header";
-import Popup from "@/components/PopUp";
 import CanvasModel from "@/components/Canvas";
 import { useRouter, useSearchParams } from "next/navigation";
+import DesktopPopups from "@/components/DesktopPopups";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
+import MobilePopups from "@/components/MobilePopups";
 
 const Home: React.FC = () => {
-  const [tab, setTab] = useState('');
+  const [tab, setTab] = useState("");
   const searchParams = useSearchParams();
-  const router = useRouter()
-  useEffect(()=> {
+  const router = useRouter();
+  const { width } = useWindowDimensions();
+  useEffect(() => {
     if (searchParams) {
-      const urlTab = searchParams.get('tab')
-      
-      if( urlTab ) setTab(urlTab)
+      const urlTab = searchParams.get("tab");
+
+      if (urlTab) setTab(urlTab);
     }
-  }, [searchParams]) 
+  }, [searchParams]);
 
   function closePopup() {
-    setTab('')
-    router.replace('/')
+    setTab("");
+    router.replace("/");
   }
 
   return (
     <>
       <Header back={false} />
       <div className="container">
-       <CanvasModel/>
-        {tab === 'career' && (
-          <Popup
-            name={"Career"}
-            position={{
-              top: "30%",
-              left: "4%",
-              width: "400px",
-              height: "400px",
-            }}
-            onClose={() =>closePopup()}
-          />
-        )}
-        {tab === 'qualifications' && (
-          <Popup
-            name={"Education"}
-            position={{
-              top: "18%",
-              left: "7%",
-              width: "400px",
-              height: "275px",
-            }}
-            onClose={() => closePopup()}
-          />
-        )}
-        {tab === 'qualifications' && (
-          <Popup
-            name={"Technologies"}
-            position={{
-              top: "30%",
-              left: "52%",
-              width: "600px",
-              height: "350px",
-            }}
-            onClose={() => closePopup()}
-          />
-        )}
-        {tab === 'contact' && (
-          <Popup
-            name={"Contact"}
-            position={{
-              top: "60%",
-              left: "20%",
-              width: "850px",
-              height: "250px",
-            }}
-            onClose={() => closePopup()}
-          />
-        )}
-        {tab === 'projects' && (
-          <Popup
-            position={{
-              top: "25%",
-              left: "65%",
-              width: "400px",
-              height: "460px",
-            }}
-            name={"Projects"}
-            onClose={() => closePopup()}
-          />
+        <CanvasModel />
+
+        {width > 500 ? (
+          <DesktopPopups tab={tab} closePopup={closePopup} />
+        ) : (
+          <MobilePopups tab={tab} closePopup={closePopup} />
         )}
       </div>
     </>

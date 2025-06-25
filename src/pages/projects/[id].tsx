@@ -2,10 +2,12 @@ import Header from "@/components/Header";
 import { allProjectData } from "@/constants/project-data";
 import { projectData } from "@/constants/types";
 import { useRouter } from "next/router";
-import "../../styles/Projects.css";
+import "../../styles/Projects.scss";
+import "../../styles/globals.scss";
 import Link from "next/link";
 import Image from "next/image";
 import ImageGallery from "@/components/ImageGallery";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 export default function Profile() {
   const router = useRouter();
@@ -13,11 +15,13 @@ export default function Profile() {
   const profile = allProjectData.filter((pd: projectData) => {
     return pd.id === id || undefined;
   });
+  const {width } = useWindowDimensions()
+  const isDesktop = width > 500 ? true : false;
 
   if (profile !== undefined && profile[0]) {
     return (
       <div style={{ overflow: "hidden", height: "100%" }}>
-        <Header back={true} home={true} />
+        <Header back={true} home={isDesktop ? true : false} />
 
         <div className="layout">
           <aside>
@@ -41,7 +45,7 @@ export default function Profile() {
             </ul>
           </aside>
           <main>
-            <div className="row" style={{ marginTop: 24,alignItems: "flex-end" }}>
+            <div className={"header-row"}>
               <Image
                 width={200}
                 height={200}
@@ -49,7 +53,7 @@ export default function Profile() {
                 src={profile[0].img}
               />
 
-              <div className="column" style={{marginLeft: 24}}>
+              <div className="column" style={{marginLeft: isDesktop ? 24 : 0}}>
                 <h2 style={{ marginBottom: 12 }}>{profile[0].title}</h2>
                 <div className="row">
                   {profile[0].projectDetails &&

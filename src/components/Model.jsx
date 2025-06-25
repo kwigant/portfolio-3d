@@ -9,10 +9,19 @@ import React, { useRef, useState } from 'react'
 import { useGLTF, OrthographicCamera, PerspectiveCamera } from '@react-three/drei'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useRouter } from "next/navigation";
+import useWindowDimensions from '@/hooks/useWindowDimensions';
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF('/latest-portfolio.glb')
   const router = useRouter()
+    const { width } = useWindowDimensions();
+  
+  function getZoom() {
+    if (width < 500) return 20
+    if (width > 500 && width < 1000) return 50
+    if (width > 1000) return 75
+  }
+
     // const catHeadRef = useRef()
   // const { mouse, camera } = useThree()
 
@@ -30,7 +39,7 @@ export default function Model(props) {
   // })
   return (
     <group {...props}  rotation={[0, Math.PI, 0]} dispose={null}>
-      <OrthographicCamera makeDefault={true} zoom={75} far={1000} near={0.1} position={[-1.699, 10.565, -11.704]} rotation={[-2.944, -0.173, -3.107]} />
+      <OrthographicCamera makeDefault={true} zoom={getZoom()} far={1000} near={0.1} position={[-1.699, 10.565, -11.704]} rotation={[-2.944, -0.173, -3.107]} />
       <mesh   geometry={nodes.monitor.geometry} material={materials['monitor-material']} position={[-0.86, 6.013, 6.498]} scale={[1.56, 1.024, 0.16]} />
       <mesh  geometry={nodes.Cube001.geometry} material={materials['white-board-material']} position={[-3.85, 9.001, 7.148]} scale={[1.635, 2.379, 0.065]} />
       <mesh geometry={nodes.Blinds.geometry} material={materials['blinds-material']} position={[1.969, 10.709, 6.972]} rotation={[0.005, -0.001, -0.002]} scale={[3.455, 0.494, 0.137]} />
