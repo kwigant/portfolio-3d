@@ -1,0 +1,92 @@
+@use './PopUp.scss';
+@use './globals.scss';
+
+
+.list {
+   @extend .font;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.clickable-li {
+  margin-bottom: 12px;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.degree {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.school {
+  margin: 0;
+  font-size: 16px;
+}
+
+.date {
+  margin: 4px 0;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 100;
+  color: globals.$secondary-color;
+}
+
+h2 {
+    @extend h2;
+
+    text-align: left;
+}
+
+@media (max-width: 500px) {
+
+    h2 {
+        text-align: center;
+    }
+
+  li {
+    align-items: center;
+  }
+
+  ul {
+    margin-top: 24px;
+  }
+
+  .img {
+    margin-bottom: 12px;
+    width: 100px;
+    height: 80px;
+  }
+
+  .date {
+    font-size: 15px  !important;
+    text-decoration: italic;
+  }
+
+  .school {
+    font-size: 17px !important;
+  }
+
+  .degree {
+    font-size: 19px !important;
+  }
+}

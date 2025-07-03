@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import Menu from "./Menu";
+import { useHasMounted } from "@/hooks/useHasMounted";
 
 type HeaderProps = {
   back: boolean;
@@ -13,14 +14,13 @@ type HeaderProps = {
 };
 
 export default function Header(props: HeaderProps) {
-  const [backHover, setBackHover] = useState(false);
   const router = useRouter();
   const { width } = useWindowDimensions();
   const isDesktop = width > 500 ? true : false;
   const [menu, setMenu] = useState(false);
   const params = new URLSearchParams();
   const searchParams = useSearchParams();
-  
+  const hasMounted = useHasMounted()
   function setTabByURL(tab: string) {
     params.set("tab", tab);
     router.push(`/?${params.toString()}`);
@@ -30,6 +30,7 @@ export default function Header(props: HeaderProps) {
     if (searchParams?.get("tab") === idx || searchParams?.get("tab") === idx.toUpperCase()) return "link-active";
     else return "link";
   }
+  if (!hasMounted) return null; 
 
   return (
     <header
@@ -61,8 +62,6 @@ export default function Header(props: HeaderProps) {
 
       {props.back  && (
         <button
-          onMouseOver={() => setBackHover(true)}
-          onMouseOut={() => setBackHover(false)}
           className="back-link"
           onClick={() => router.back()}
         >

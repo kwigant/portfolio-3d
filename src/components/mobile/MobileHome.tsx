@@ -2,6 +2,7 @@ import Image from "next/image";
 import TitleCycle from "./TitleCycle";
 import "@/styles/globals.scss";
 import Link from "next/link";
+import MobileCanvasModel from "./MobileCanvas";
 
 type tab = {
   title: string;
@@ -18,6 +19,7 @@ export const tabs: tab[] = [
 export default function MobileHome() {
   return (
     <>
+    <MobileCanvasModel/>
       <div className="landing-img-container">
         <Image
           className="landing-img-mobile"

@@ -1,0 +1,82 @@
+
+/** Contact Popup */
+@use './PopUp.scss';
+@use './globals.scss';
+
+
+.contact {
+   @extend .font;
+   @extend .row; 
+
+  align-items: flex-start;
+}
+
+input,
+textarea {
+  font-family: "Funnel Display", sans-serif;
+  background-color: white;
+  border: none;
+  border-bottom: 2px solid rgb(212, 212, 212);
+  width: 100%;
+}
+
+input {
+  height: 40px;
+  margin-bottom: 12px;
+  padding: 4px 12px;
+  font-family: "Funnel Display", sans-serif;
+
+  &:hover {
+    border-bottom: 2px solid #f06a6a;
+  }
+
+  &:focus {
+    border-radius: 8px;
+    outline: none !important;
+    border: 2px solid #f06a6a;
+    box-shadow: 0 0 10px #c7c7c7;
+  }
+}
+
+textarea {
+  height: 88px;
+  padding: 12px;
+  font-family: "Funnel Display", sans-serif;
+
+  &:hover {
+    border-bottom: 2px solid #f06a6a;
+  }
+
+  &:focus {
+    border-radius: 8px;
+    outline: none !important;
+    border: 2px solid #f06a6a;
+    box-shadow: 0 0 10px #c7c7c7;
+  }
+}
+
+.contact-column {
+  @extend .column;
+
+  margin-left: 24px;
+  width: 100%;
+}
+
+.contact-row {
+  @extend .row;
+}
+
+@media (max-width: 500px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-column {
+    margin-left: 0
+  }
+
+  .contact-row {
+    flex-direction: column;
+  }
+}

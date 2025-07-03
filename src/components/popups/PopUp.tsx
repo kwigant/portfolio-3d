@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import "../../styles/PopUp.scss";
-import "../../styles/globals.scss";
-import "../../styles/Header.scss";
+import "@/styles/PopUp.scss";
+import "@/styles/globals.scss";
+import "@/styles/Header.scss";
+import "@/styles/lists.scss";
+import "@/styles/contact.scss";
+
 import { career, education, projects, tech } from "@/constants/popup-data";
 import PopupList from "./PopupList";
 import PopupGrid from "./PopupGrid";

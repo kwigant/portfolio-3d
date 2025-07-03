@@ -96,6 +96,8 @@
   animation: expand-width-500 0.3s ease-out;
 }
 
+/* Layout CSS */
+
 aside {
   width: 260px;
   display: flex;
@@ -110,14 +112,15 @@ main {
   width: 100%;
 }
 
-.expand-link {
-  text-decoration: none;
-  font-size: 16px;
-  color: #3c383b;
-  align-items: center;
+.end-row {
   display: flex;
-  padding-right: 8px;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 24px;
 }
+
+/* Font CSS */
 
 .subtitle {
   margin-bottom: 0;
@@ -136,16 +139,18 @@ p {
   color: #3c383b;
 }
 
-.end-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  width: 100%;
-  margin-top: 24px;
-}
-
 h3 {
   margin: 0;
+}
+
+/* Buttons */
+.expand-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #3c383b;
+  align-items: center;
+  display: flex;
+  padding-right: 8px;
 }
 
 .primary-btn {
@@ -178,156 +183,9 @@ h3 {
   }
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  margin-bottom: 32px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-}
-
-.clickable-li {
-  margin-bottom: 12px;
-}
-
-.flex-end {
-  justify-content: flex-end;
-}
-
-.degree {
-  margin: 0;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.school {
-  margin: 0;
-  font-size: 16px;
-}
-
-.date {
-  margin: 4px 0;
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 100;
-  color: globals.$secondary-color;
-}
-
-/** Tech Popup */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
-.next-link {
-  text-decoration: none;
-}
-
-.tech-logos {
-  font-size: 12px;
-  padding: 0;
-  margin: 0;
-  width: 100px;
-  text-align: center;
-}
-
-.tech-container {
-  display: flex;
-  flex-direction: column;
-  padding: 6px;
-  align-items: center;
-}
-
-/** Contact Popup */
-
-input,
-textarea {
-  font-family: "Funnel Display", sans-serif;
-  background-color: white;
-  border: none;
-  border-bottom: 2px solid rgb(212, 212, 212);
-  width: 100%;
-}
-
-input {
-  height: 40px;
-  margin-bottom: 12px;
-  padding: 4px 12px;
-  font-family: "Funnel Display", sans-serif;
-
-  &:hover {
-    border-bottom: 2px solid #f06a6a;
-  }
-
-  &:focus {
-    border-radius: 8px;
-    outline: none !important;
-    border: 2px solid #f06a6a;
-    box-shadow: 0 0 10px #c7c7c7;
-  }
-}
-
-textarea {
-  height: 88px;
-  padding: 12px;
-  font-family: "Funnel Display", sans-serif;
-
-  &:hover {
-    border-bottom: 2px solid #f06a6a;
-  }
-
-  &:focus {
-    border-radius: 8px;
-    outline: none !important;
-    border: 2px solid #f06a6a;
-    box-shadow: 0 0 10px #c7c7c7;
-  }
-}
-
 .img {
   width: 100px;
   height: 100px;
   border-radius: 8px;
   margin-right: 12px;
-}
-
-@media (max-width: 500px) {
-  .grid {
-    padding: 0 12px;
-    grid-template-columns: 1fr 1fr 1fr;
-    font-size: 15px;
-  }
-
-  li {
-    align-items: center;
-    // padding: 0 24px;
-  }
-
-  ul {
-    margin-top: 24px;
-  }
-
-  .img {
-    margin-bottom: 12px;
-    width: 100px;
-    height: 80px;
-  }
-
-  .date {
-    font-size: 15px  !important;
-    text-decoration: italic;
-  }
-
-  .school {
-    font-size: 17px !important;
-  }
-
-  .degree {
-    font-size: 19px !important;
-  }
 }

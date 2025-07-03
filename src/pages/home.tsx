@@ -9,6 +9,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import DesktopPopups from "@/components/popups/DesktopPopups";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import MobileHome from "@/components/mobile/MobileHome";
+import { useHasMounted } from "@/hooks/useHasMounted";
 
 const Home: React.FC = () => {
   const [tab, setTab] = useState("");
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
   const router = useRouter();
   const { width } = useWindowDimensions();
   const isDesktop = width > 500 ? true : false;
+  const hasMounted = useHasMounted();
 
   useEffect(() => {
     if (searchParams) {
@@ -30,18 +32,20 @@ const Home: React.FC = () => {
     router.replace("/");
   }
 
+  if (!hasMounted) return null; // to do: loading component
+
   return (
     <div>
       {isDesktop && <Header back={false} />}
 
       <div className="container">
-        <CanvasModel />
-
         {isDesktop ? (
-          <DesktopPopups tab={tab} closePopup={closePopup} />
+          <>
+            <CanvasModel />
+            <DesktopPopups tab={tab} closePopup={closePopup} />
+          </>
         ) : (
-         <MobileHome/>
-          
+          <MobileHome />
         )}
       </div>
     </div>

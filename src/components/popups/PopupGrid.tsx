@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import "@/styles/grid.scss"
 type Grid = {
     img: string;
     title: string;

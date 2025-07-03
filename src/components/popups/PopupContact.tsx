@@ -1,13 +1,10 @@
-import useWindowDimensions from "@/hooks/useWindowDimensions";
 import Image from "next/image";
 
 export default function PopupContact() {
-    const {width} = useWindowDimensions()
-    const isDesktop = width > 500 ? true : false
   return (
     <>
       <h2>Let&apos;s Get in Touch</h2>
-      <div className={isDesktop ? "row" : "column"} style={{ alignItems: width > 500 ? "flex-start" : "center" }}>
+      <div className={"contact"}>
         <Image
           alt="portrait"
           style={{ borderRadius: 8 }}
@@ -15,7 +12,7 @@ export default function PopupContact() {
           width={200}
           src={"/visuals/kw-pic.svg"}
         />
-        <div className="column" style={{ marginLeft: isDesktop ?  24 : 0, width: "100%" }}>
+        <div className="contact-column" >
           <p className="subtitle">
             I&apos;m currently available for freelance work!
           </p>
@@ -24,7 +21,7 @@ export default function PopupContact() {
             work, feel free to reach out. I handle both design and development
             and would love to hear from you.
           </p>
-          <div className={isDesktop ? "row" : "column"}>
+          <div className="contact-row">
             <div className="row">
               <Image
                 src={"/icons/linkedin.png"}

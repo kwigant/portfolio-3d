@@ -1,0 +1,34 @@
+
+/** Tech Popup */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.next-link {
+  text-decoration: none;
+}
+
+.tech-logos {
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  width: 100px;
+  text-align: center;
+}
+
+.tech-container {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  align-items: center;
+}
+
+
+@media (max-width: 500px) {
+  .grid {
+    padding: 0 12px;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 15px;
+  }
+}

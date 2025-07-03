@@ -77,6 +77,16 @@
   margin-bottom: 60px;
 }
 
+.projects-row {
+  @extend .row;
+}
+
+.projects-column {
+  @extend .column;
+
+  margin-left: 24px;
+}
+
 .date {
   grid-column: 4;
   display: flex;
@@ -221,6 +231,16 @@
     margin-top: 48px;
     margin-bottom: 48px;
   }
+
+  .projects-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+.projects-column {
+  margin-left: 0;
+}
+
   .text-column {
     display: flex;
     flex-direction: column;

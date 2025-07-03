@@ -7,7 +7,6 @@ import "../../styles/globals.scss";
 import Link from "next/link";
 import Image from "next/image";
 import ImageGallery from "@/components/ImageGallery";
-import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 export default function Profile() {
   const router = useRouter();
@@ -15,13 +14,12 @@ export default function Profile() {
   const profile = allProjectData.filter((pd: projectData) => {
     return pd.id === id || undefined;
   });
-  const {width } = useWindowDimensions()
-  const isDesktop = width > 500 ? true : false;
+ 
 
   if (profile !== undefined && profile[0]) {
     return (
       <div style={{ overflow: "hidden", height: "100%" }}>
-        <Header back={true} home={isDesktop ? true : false} />
+        <Header back={true} home={true} />
 
         <div className="layout">
           <aside>
@@ -53,9 +51,9 @@ export default function Profile() {
                 src={profile[0].img}
               />
 
-              <div className="column" style={{marginLeft: isDesktop ? 24 : 0}}>
+              <div className="projects-column">
                 <h2 style={{ marginBottom: 12 }}>{profile[0].title}</h2>
-                <div className={isDesktop ? "row" : "grid"}>
+                <div className={"projects-row"}>
                   {profile[0].projectDetails &&
                     profile[0].projectDetails.techStack &&
                     profile[0].projectDetails.techStack.map((t, i) => (
