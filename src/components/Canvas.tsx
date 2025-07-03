@@ -2,16 +2,18 @@ import { Center } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import Model from "./Model";
+import MobileModel from "./mobile/MobileModel";
 import "../styles/globals.scss";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 export default function CanvasModel() {
   const {width} = useWindowDimensions()
+   const isDesktop = width > 500 ? true : false
   return (
     <Canvas
       shadows={true}
       className="canvas"
-      style={{height: width > 500 ? "75vh" : 300 }}
+      style={{height:  isDesktop ? "75vh" : 280, marginBottom: isDesktop ? 0 : 32 }}
     >
       <hemisphereLight args={["#CB9FCD", "#3529A9", 4]} />
       <pointLight
@@ -41,7 +43,7 @@ export default function CanvasModel() {
       />
       <Suspense fallback={null}>
         <Center>
-          <Model />
+          {isDesktop ? <Model/> : <MobileModel/>}
         </Center>
       </Suspense>
     </Canvas>

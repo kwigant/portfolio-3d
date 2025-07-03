@@ -55,7 +55,7 @@ export default function Profile() {
 
               <div className="column" style={{marginLeft: isDesktop ? 24 : 0}}>
                 <h2 style={{ marginBottom: 12 }}>{profile[0].title}</h2>
-                <div className="row">
+                <div className={isDesktop ? "row" : "grid"}>
                   {profile[0].projectDetails &&
                     profile[0].projectDetails.techStack &&
                     profile[0].projectDetails.techStack.map((t, i) => (

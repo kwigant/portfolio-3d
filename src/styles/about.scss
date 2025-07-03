@@ -40,15 +40,15 @@
 
 
 strong {
-  color:#F06A6A;
+  color: globals.$primary-color
 }
 
 a {
-  text-decoration-color: rgb(251, 129, 113);
+  text-decoration-color:  globals.$primary-color;
 }
 
 .scroll-icon {
-    background-color: #7D757B;
+    background-color: globals.$secondary-color;
     padding: 4px;
     border-radius: 24px;
     width: 32px;

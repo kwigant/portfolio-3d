@@ -1,4 +1,4 @@
-import Popup from "./popups/PopUp";
+import Popup from "./PopUp";
 
 type DesktopPopups = {
   tab: string;

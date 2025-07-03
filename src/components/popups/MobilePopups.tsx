@@ -1,7 +1,7 @@
 import { career, education, projects, tech } from "@/constants/popup-data";
-import PopupList from "./popups/PopupList";
-import PopupGrid from "./popups/PopupGrid";
-import PopupContact from "./popups/PopupContact";
+import PopupList from "./PopupList";
+import PopupGrid from "./PopupGrid";
+import PopupContact from "./PopupContact";
 
 type MobilePopups = {
   tab: string;

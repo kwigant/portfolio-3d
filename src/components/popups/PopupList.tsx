@@ -1,3 +1,4 @@
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,18 +18,21 @@ type PopupListProps = {
 };
 
 export default function PopupList(props: PopupListProps) {
+
+  const {width } = useWindowDimensions()
+  const isDesktop = width > 500 ? true : false;
   return (
     <div className="column">
-      <h2>{props.title}</h2>
+      <h2 style={{textAlign: isDesktop ? 'left' : 'center'}}>{props.title}</h2>
       <ul>
         {props.list.map((l, i) => {
           return props.clickable && l.path ? (
             <Link className="next-link" href={l.path} key={i}>
               <li className="clickable-li">
                 <Image
-                  style={{ borderRadius: 8, marginRight: 12 }}
-                  width={100}
-                  height={100}
+                  className="img"
+                  width={isDesktop ? 100 : 60}
+                  height={isDesktop ? 100 : 60}
                   src={l.src}
                   alt={l.alt}
                 />
@@ -42,9 +46,9 @@ export default function PopupList(props: PopupListProps) {
           ) : (
             <li key={i}>
               <Image
-                style={{ borderRadius: 8, marginRight: 12 }}
-                width={100}
-                height={100}
+                className="img"
+                width={isDesktop ? 100 : 60}
+                height={isDesktop ? 100 : 60}
                 src={l.src}
                 alt={l.alt}
               />

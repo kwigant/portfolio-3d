@@ -21,17 +21,20 @@
   ];
  
   export const tech = [
-    {title: 'React + React Native', img: '/tech/react.svg'},
+        {title: 'React + React Native', img: '/tech/react.svg'},
+
     {title: 'Angular', img: '/tech/angular.svg'},
     {title: 'Supabase', img: '/tech/supabase.svg'},
-    {title: 'PostgresQL', img: '/tech/postgresql.svg'},
+       
+
     {title: 'GraphQL', img: '/tech/graphql.svg'},
+     {title: 'PostgresQL', img: '/tech/postgresql.svg'},
     {title: 'Node.js + Express', img: '/tech/nodejs.svg'},
     {title: 'JavaScript', img: '/tech/javascript.svg'},
     {title: 'TypeScript', img: '/tech/typescript.svg'},
     {title: 'TensorFlow.js', img: '/tech/tensorflow.svg'},
+     {title: 'Three.js', img: '/tech/threejs.svg'},
     {title: 'Adobe Illustrator', img: '/tech/adobe.svg'},
-    {title: 'Three.js', img: '/tech/threejs.svg'},
     {title: 'Figma', img: '/tech/figma.svg'},
     {title: 'Blender', img: '/tech/blender.svg'},
     {title: 'Vercel', img: '/tech/vercel.svg'},

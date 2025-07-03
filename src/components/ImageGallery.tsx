@@ -3,13 +3,15 @@ import { useState } from "react";
 import "../styles/globals.scss";
 import Link from "next/link";
 import { Gallery } from "@/constants/types";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 type PropsGallery = {
   images: Gallery[]
 }
 export default function ImageGallery(props: PropsGallery) {
   const [currentIdx, setCurrentIdx] = useState(0);
-
+  const {width} = useWindowDimensions()
+  const isDesktop = width > 500 ? true : false;
   function rightClick() {
     if (currentIdx < props.images.length - 1) setCurrentIdx(currentIdx + 1);
     else setCurrentIdx(0);
@@ -69,7 +71,7 @@ export default function ImageGallery(props: PropsGallery) {
         {props.images[currentIdx].description}
       </p>
 
-      <div style={{ position: "relative", width: "100%", height: 600 }}>
+      <div style={{ position: "relative", width: "100%", height: isDesktop ? 600 : '100%' }}>
         <Image fill={true} src={getImage()} alt={"project image"} />
       
       </div>

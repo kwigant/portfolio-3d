@@ -1,10 +1,11 @@
 import { useState } from "react";
-import "../styles/Header.css";
+import "../styles/Header.scss";
 import "../styles/globals.scss";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
+import Menu from "./Menu";
 
 type HeaderProps = {
   back: boolean;
@@ -15,28 +16,29 @@ export default function Header(props: HeaderProps) {
   const [backHover, setBackHover] = useState(false);
   const router = useRouter();
   const { width } = useWindowDimensions();
+  const isDesktop = width > 500 ? true : false;
   const [menu, setMenu] = useState(false);
   const params = new URLSearchParams();
   const searchParams = useSearchParams();
-  const tabs = ["career", "qualifications", "contact", "projects"];
+  
   function setTabByURL(tab: string) {
     params.set("tab", tab);
     router.push(`/?${params.toString()}`);
   }
 
   function getTabStyle(idx: string) {
-    if (searchParams?.get("tab") === idx) return "link-active";
+    if (searchParams?.get("tab") === idx || searchParams?.get("tab") === idx.toUpperCase()) return "link-active";
     else return "link";
   }
 
   return (
     <header
       style={{
-        justifyContent: props.back ? "center" : "space-evenly",
+        justifyContent: props.back ? isDesktop ?"center" : "space-between" : "space-evenly",
         alignItems: "center",
       }}
     >
-      {width > 500 && !props.back && (
+      {isDesktop && !props.back && (
         <>
           <h4
             onClick={() => setTabByURL("career")}
@@ -57,7 +59,7 @@ export default function Header(props: HeaderProps) {
         </>
       )}
 
-      {props.back && (
+      {props.back  && (
         <button
           onMouseOver={() => setBackHover(true)}
           onMouseOut={() => setBackHover(false)}
@@ -65,16 +67,18 @@ export default function Header(props: HeaderProps) {
           onClick={() => router.back()}
         >
           <Image
-            width={32}
-            height={32}
+            width={18}
+            height={18}
             alt="back"
-            src={backHover ? "/icons/arrow-pink.png" : "/icons/arrow-black.png"}
+            src={
+              '/icons/chevron-left.png'
+            }
           />
         </button>
       )}
 
       <Link href={"/about"} className="name-container">
-        <h1>Kirsten Wigant</h1>
+        <h2>Kirsten Wigant</h2>
         <h4>Freelance Web & Mobile Developer</h4>
       </Link>
 
@@ -84,7 +88,7 @@ export default function Header(props: HeaderProps) {
         </button>
       )}
 
-      {width > 500 && !props.back && (
+      {isDesktop && !props.back && (
         <>
           <h4
             onClick={() => setTabByURL("contact")}
@@ -104,22 +108,10 @@ export default function Header(props: HeaderProps) {
           </h4>
         </>
       )}
-      {width < 500 && <button onClick={() => setMenu(!menu)}>Menu</button>}
+      {!isDesktop && <button className="next-link" onClick={() => setMenu(!menu)}><Image src={'/icons/menu.png'} alt={'menu'} width={24} height={24}/></button>}
 
       {menu && (
-        <ul className="menu">
-          {tabs.map((t, i) => {
-            return (
-              <li
-                key={i}
-                onClick={() => setTabByURL(t)}
-                className={`${getTabStyle(t)} hover-underline-animation left`}
-              >
-                {t}
-              </li>
-            );
-          })}
-        </ul>
+       <Menu onClose={()=>setMenu(false)} getTabStyle={getTabStyle} setTab={setTabByURL}/>
       )}
     </header>
   );

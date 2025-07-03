@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+@use "./globals.scss";
 
 /** General Popup Styles*/
 
@@ -102,7 +102,7 @@ aside {
   padding: 12px 24px;
   flex-direction: column;
   align-items: center;
-  border-right: 2px solid rgb(216, 216, 216);
+  border-right: 2px solid globals.$secondary-color;
 }
 
 main {
@@ -122,7 +122,6 @@ main {
 .subtitle {
   margin-bottom: 0;
 }
-
 
 h2 {
   font-family: "Funnel Display", sans-serif;
@@ -151,7 +150,7 @@ h3 {
 
 .primary-btn {
   font-family: "Funnel Display", sans-serif;
-  background-color: #F06A6A;
+  background-color: #f06a6a;
   color: white;
   border: none;
   font-weight: bold;
@@ -166,7 +165,7 @@ h3 {
   text-align: center;
   border-radius: 8px;
   font-family: "Funnel Display", sans-serif;
-  color: #F06A6A;
+  color: #f06a6a;
   font-weight: bold;
   font-size: 18px;
   padding: 4px 12px;
@@ -175,7 +174,7 @@ h3 {
 
   &:hover {
     color: white;
-    background: #F06A6A;
+    background: #f06a6a;
   }
 }
 
@@ -194,7 +193,6 @@ li {
 
 .clickable-li {
   margin-bottom: 12px;
-
 }
 
 .flex-end {
@@ -217,7 +215,7 @@ li {
   font-size: 14px;
   font-style: italic;
   font-weight: 100;
-  color: #00000070;
+  color: globals.$secondary-color;
 }
 
 /** Tech Popup */
@@ -263,15 +261,13 @@ input {
   font-family: "Funnel Display", sans-serif;
 
   &:hover {
-    border-bottom: 2px solid #F06A6A;
+    border-bottom: 2px solid #f06a6a;
   }
-  &:disabled&:hover {
-    border-bottom: 2px solid rgb(212, 212, 212);
-  }
+
   &:focus {
     border-radius: 8px;
     outline: none !important;
-    border: 2px solid #F06A6A;
+    border: 2px solid #f06a6a;
     box-shadow: 0 0 10px #c7c7c7;
   }
 }
@@ -282,27 +278,56 @@ textarea {
   font-family: "Funnel Display", sans-serif;
 
   &:hover {
-    border-bottom: 2px solid #F06A6A;
+    border-bottom: 2px solid #f06a6a;
   }
 
   &:focus {
     border-radius: 8px;
     outline: none !important;
-    border: 2px solid #F06A6A;
+    border: 2px solid #f06a6a;
     box-shadow: 0 0 10px #c7c7c7;
   }
 }
 
 .img {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 8px;
-  background-color: gray;
   margin-right: 12px;
 }
 
 @media (max-width: 500px) {
   .grid {
-      grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 12px;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 15px;
+  }
+
+  li {
+    align-items: center;
+    // padding: 0 24px;
+  }
+
+  ul {
+    margin-top: 24px;
+  }
+
+  .img {
+    margin-bottom: 12px;
+    width: 100px;
+    height: 80px;
+  }
+
+  .date {
+    font-size: 15px  !important;
+    text-decoration: italic;
+  }
+
+  .school {
+    font-size: 17px !important;
+  }
+
+  .degree {
+    font-size: 19px !important;
   }
 }

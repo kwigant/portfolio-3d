@@ -6,15 +6,17 @@ import "../styles/globals.scss";
 import Header from "@/components/Header";
 import CanvasModel from "@/components/Canvas";
 import { useRouter, useSearchParams } from "next/navigation";
-import DesktopPopups from "@/components/DesktopPopups";
+import DesktopPopups from "@/components/popups/DesktopPopups";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
-import MobilePopups from "@/components/MobilePopups";
+import MobileHome from "@/components/mobile/MobileHome";
 
 const Home: React.FC = () => {
   const [tab, setTab] = useState("");
   const searchParams = useSearchParams();
   const router = useRouter();
   const { width } = useWindowDimensions();
+  const isDesktop = width > 500 ? true : false;
+
   useEffect(() => {
     if (searchParams) {
       const urlTab = searchParams.get("tab");
@@ -29,18 +31,20 @@ const Home: React.FC = () => {
   }
 
   return (
-    <>
-      <Header back={false} />
+    <div>
+      {isDesktop && <Header back={false} />}
+
       <div className="container">
         <CanvasModel />
 
-        {width > 500 ? (
+        {isDesktop ? (
           <DesktopPopups tab={tab} closePopup={closePopup} />
         ) : (
-          <MobilePopups tab={tab} closePopup={closePopup} />
+         <MobileHome/>
+          
         )}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -2,10 +2,13 @@ import Header from "@/components/Header";
 import { devData } from "@/constants/project-list-data";
 import "../styles/Projects.scss";
 import "../styles/globals.scss";
-import "../styles/Header.css";
+import "../styles/Header.scss";
 import Image from "next/image";
 import Link from "next/link";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 export default function Projects() {
+  const {width} = useWindowDimensions()
+  const isDesktop = width > 500 ? true : false;
   return (
     <div>
       <Header back={true} />
@@ -35,7 +38,7 @@ export default function Projects() {
               >
                 <h3>{d.title}</h3>
 
-                <div className="row">
+                <div className={isDesktop ? "row" : "grid"}>
                   {d.tags.map((t, i) => (
                     <div className="tag" key={i}>
                       {t}

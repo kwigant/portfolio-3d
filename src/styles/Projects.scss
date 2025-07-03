@@ -1,14 +1,7 @@
 @use "./globals.scss";
 
-@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
-.next-link {
-  text-decoration: none;
-  color: #3c383b;
-}
-
 .layout {
   display: flex;
-  /* overflow-x: hidden; */
   flex-direction: row;
   font-family: "Funnel Display", sans-serif;
 
@@ -27,18 +20,18 @@
     li {
       padding: 12px 0;
       font-size: 18px;
-      color: gray;
+      color: globals.$secondary-color;
       font-weight: 100;
 
       &:hover {
-        color: #fe9689;
+        color: globals.$primary-color;
         font-weight: bold;
         cursor: pointer;
       }
     }
 
     .li-current {
-      color: #f06a6a;
+      color: globals.$primary-color;
       font-weight: bold;
     }
   }
@@ -48,15 +41,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
-
-    h1 {
-      margin: 0;
-      color: #3c383b;
-    }
 
     p {
-      color: #3c383b;
+      color: globals.$body-color;
     }
   }
 }
@@ -64,7 +51,7 @@
 .btn {
   background-color: white;
   font-family: "Funnel Display", sans-serif;
-  color: #f06a6a;
+  color: globals.$primary-color;
   border: none;
   font-size: 18px;
   padding: 0;
@@ -114,7 +101,7 @@
   padding-bottom: 24px;
   max-width: 800px;
   text-decoration: none;
-  color: #3c383b;
+  color: globals.$body-color;
 }
 
 .project-list {
@@ -138,9 +125,9 @@
   font-size: 16px;
   width: fit-content;
   margin: 0;
-  color: #898989;
+  color: globals.$secondary-color;
   font-weight: normal;
-  border-right: 1px solid #898989;
+  border-right: 1px solid globals.$secondary-color;
 }
 
 .tag:first-child {
@@ -163,6 +150,12 @@
   /* letter-spacing: .1rem; */
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  word-break: break-all;
+}
+
 .header-row {
   @extend .row;
 
@@ -179,7 +172,7 @@
   padding-bottom: 24px;
   max-width: 800px;
   text-decoration: none;
-  color: #3c383b;
+  color: globals.$body-color;
 }
 
 .project-list {
@@ -201,16 +194,15 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      overflow: scroll;
       align-items: center;
 
       h1 {
         margin: 0;
-        color: #3c383b;
+        color: globals.$body-color;
       }
 
       p {
-        color: #3c383b;
+        color: globals.$body-color;
       }
     }
   }
@@ -238,13 +230,25 @@
     margin: 0;
   }
 
-.date {
- max-width: none;
-}
+  .date {
+    max-width: none;
+  }
 
-.stack {
-   max-width: none;
+  .stack {
+    max-width: none;
+  }
 
-}
-
+  .tag {
+    padding: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 0;
+    color: globals.$secondary-color;
+    font-weight: normal;
+    border: none;
+  }
+  .project-list-item {
+    flex-direction: column;
+  }
 }

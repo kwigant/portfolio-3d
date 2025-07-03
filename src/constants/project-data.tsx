@@ -19,11 +19,14 @@ export const allProjectData: projectData[] = [
       date: "June 2025",
       role: "Lead Designer & Developer",
       techStack: [
-        "React + React Three.js",
-        "NextJS",
+        "React",
+        "Three.js",
+        "Next.JS",
         "TypeScript",
-        "Vercel",
-        "Blender + Figma",
+       
+        "Figma",
+        "Blender",
+         "Vercel",
       ],
       images: [
         {

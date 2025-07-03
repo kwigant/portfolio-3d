@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+$primary-color: #f06a6a;
+$body-color: #3c383b;
+$secondary-color: #898989;
 
 .container {
   display: flex;
@@ -6,18 +9,12 @@
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  border-radius: 9px;
 }
 
 body {
   color: var(--foreground);
- 
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-h2 {
-  font-family: "Funnel Display", sans-serif;
 }
 
 
@@ -40,23 +37,21 @@ h2 {
 }
 
 .canvas {
-  background-color: #FFE8CC;
+  background-color: #ffe8cc;
   height: 75vh;
-  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+  border-radius: 0;
 }
 
-
-/* 
-Header: 50px
-SubHeader: 35px
-Body: 18px
-Body large: 20px
-Secondary: 16px
-Tertiary: 14px all caps
-*/
+.next-link {
+  text-decoration: none;
+  color: $body-color;
+  background: none;
+  border: none;
+}
 
 .font {
-    font-family: "Funnel Display", sans-serif;
+  color: $body-color;
+  font-family: "Funnel Display", sans-serif;
 }
 
 h1 {
@@ -75,6 +70,7 @@ h3 {
   @extend .font;
 
   font-size: 24px;
+  margin: 0;
 }
 
 h4 {
@@ -88,6 +84,7 @@ p {
   @extend .font;
 
   font-size: 18px;
+  font-weight: 200;
 }
 
 .small-text {
@@ -95,47 +92,125 @@ p {
 
   font-size: 14px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 200;
   padding: 4px 0 0 0;
   margin: 0;
+  color: $secondary-color;
 }
 
 .btn {
-    outline: none;
-    background: none;
+  outline: none;
+  background: none;
+  border: none;
 }
 
+.outline-btn {
+  background-color: white;
+  text-align: center;
+  border-radius: 4px;
+  font-family: "Funnel Display", sans-serif;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 4px 12px;
+  flex-grow: 1;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 12px 12px 0 0;
+}
+
+.filled-btn {
+  @extend .outline-btn;
+
+  background-color: $primary-color;
+  color: white;
+  border: none;
+}
+
+
+.landing-img-container {
+  position: absolute;
+  top: 220px;
+  left: unset;
+  border-radius: 70px;
+  overflow: hidden;
+  border: 4px solid white;
+  height: 120px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+
+}
+
+.landing-img-mobile {
+   object-fit: cover;
+}
+
+.landing-mobile-btns {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.title-cycle {
+  @extend h1;
+
+  height: 100%;
+  text-align: center;
+  font-weight: bold;  
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 // phone screens
 @media (max-width: 500px) {
+  body {
+    margin: 16px;
+  }
+
   h1 {
     font-size: 28px;
   }
 
   h2 {
+    text-align: left;
+    margin-left: 24px;
+    font-size: 24px;
+  }
+
+  h3 {
     font-size: 20px;
   }
 
+  h4 {
+    font-size: 18px;
+  }
+
+  .small-text {
+    font-size: 15px !important;
+  }
+
   .container {
-   margin: 24px 0;
+    margin: 24px 0;
     width: 100%;
-     overflow: hidden;
-     display: flex;
-     flex-direction: column;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   .canvas {
     height: 400px;
-    
+    margin-bottom: 64px imo !important;
   }
-
 }
 
 // // tablet screens
 // @media (max-width: 1200px) {
-  
+
 // }
 
 // // xl screens
 // @media (min-width: 1400px) {
-  
+
 // }
