@@ -5,8 +5,8 @@
       height: 60,
       alt: "ucsc",
       title: "San Jose State University",
-      description: "M.S Informatics, specializing in Cybersecurity",
-      date: "Enrolled; Expected Graduation: 2027",
+      description: "M.S Informatics, Cybersecurity",
+      date: "Expected Graduation: 2027",
     },
 
     {
@@ -14,19 +14,16 @@
       width: 60,
       height: 60,
       alt: "ucsc",
-      title: "University of California, Santa Cruz",
+      title: "UC Santa Cruz",
       description: "B.S Computer Science",
       date: "Graduated June 2020",
     },
   ];
  
   export const tech = [
-        {title: 'React + React Native', img: '/tech/react.svg'},
-
+    {title: 'React + React Native', img: '/tech/react.svg'},
     {title: 'Angular', img: '/tech/angular.svg'},
     {title: 'Supabase', img: '/tech/supabase.svg'},
-       
-
     {title: 'GraphQL', img: '/tech/graphql.svg'},
      {title: 'PostgresQL', img: '/tech/postgresql.svg'},
     {title: 'Node.js + Express', img: '/tech/nodejs.svg'},

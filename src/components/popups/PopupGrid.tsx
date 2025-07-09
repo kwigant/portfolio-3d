@@ -19,7 +19,7 @@ export default function PopupGrid(props: PopupGrid) {
           return (
             <div key={i} className="tech-container">
               <Image
-                style={{ borderRadius: 8 }}
+                className="tech-logo"
                 height={60}
                 width={60}
                 alt="logo"

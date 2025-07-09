@@ -47,6 +47,7 @@ export default function Profile() {
               <Image
                 width={200}
                 height={200}
+                className="project-list-img"
                 alt="zen-tank"
                 src={profile[0].img}
               />

@@ -44,9 +44,9 @@ export default function Popup({ name, position, onClose }: PopupProps) {
   const getAnimationClass = () => {
     switch (position.width) {
       case "400px":
-        if (position.height === "250px") return "popup-250-h";
+        if (position.height === "280px") return "popup-250-h";
         if (position.height === "320px") return "popup-400-r";
-        if (position.height === "425px") return "popup-400-r";
+        if (position.height === "480px") return "popup-400-r";
 
         return "popup-400-l";
       case "850px":

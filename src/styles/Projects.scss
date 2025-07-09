@@ -1,5 +1,13 @@
 @use "./globals.scss";
 
+h3 {
+  @extend h3;
+}
+
+h2 {
+ @extend h2;
+}
+
 .layout {
   display: flex;
   flex-direction: row;
@@ -79,6 +87,8 @@
 
 .projects-row {
   @extend .row;
+
+  margin-top: 18px;
 }
 
 .projects-column {
@@ -108,7 +118,6 @@
   cursor: pointer;
   justify-content: center;
   margin: 0 0 48px 0;
-  padding-bottom: 24px;
   max-width: 800px;
   text-decoration: none;
   color: globals.$body-color;
@@ -120,7 +129,15 @@
   justify-content: center;
   align-items: center;
   font-family: "Funnel Display", sans-serif;
-  margin-top: 48px;
+}
+
+.project-list-img {
+  width: 200px;
+  height: 200px;
+}
+
+.column-spacing {
+  margin-left: 24px;
 }
 
 .text-column {
@@ -148,16 +165,8 @@
   border-right: none;
 }
 
-.project-image {
-  width: 100%;
-  height: auto;
-  margin: 48px 0;
-  border-radius: 8px;
-}
-
 .deliverables {
   max-width: 700px;
-  /* letter-spacing: .1rem; */
 }
 
 .grid {
@@ -175,11 +184,10 @@
 
 .project-list-item {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   cursor: pointer;
   justify-content: center;
-  margin: 0 0 48px 0;
-  padding-bottom: 24px;
+  margin: 0 0 64px 0;
   max-width: 800px;
   text-decoration: none;
   color: globals.$body-color;
@@ -196,7 +204,9 @@
 
 @media (max-width: 500px) {
   .layout {
+    flex-direction: column;
     aside {
+      visibility: hidden;
       display: none;
     }
     main {
@@ -233,13 +243,19 @@
   }
 
   .projects-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-.projects-column {
-  margin-left: 0;
-}
+  .projects-column {
+    margin-left: 0;
+  }
+
+  .project-list-img {
+    width: 100px;
+    height: 100px;
+    margin: 32px 0;
+  }
 
   .text-column {
     display: flex;
@@ -259,16 +275,38 @@
   }
 
   .tag {
-    padding: 0;
     font-size: 14px;
     text-transform: uppercase;
     width: fit-content;
     margin: 0;
+
+    padding: 0;
+    line-height: 24px;
     color: globals.$secondary-color;
     font-weight: normal;
     border: none;
   }
+
+  .tag::after {
+    content: "|";
+    color: #999;
+    margin: 0 8px;
+  }
+
+  .tag:last-child::after {
+    content: "";
+  }
   .project-list-item {
     flex-direction: column;
+    margin: 0 0 32px 0;
+    align-items: center;
+  }
+
+  .column-spacing {
+    margin-left: 0;
+  }
+
+  h3, h2 {
+    text-align: center;
   }
 }

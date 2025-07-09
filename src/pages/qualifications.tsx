@@ -13,6 +13,9 @@ export default function Qualifications() {
       <Header back={true} />
       
         <PopupList title={'Education'} list={education} clickable={false}/>
+        <br/>
+        <br/>
+        
         <PopupGrid title={'Technologies'} grid={tech}/>
       </div>
    

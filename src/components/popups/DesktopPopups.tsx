@@ -15,7 +15,7 @@ export default function DesktopPopups(props: DesktopPopups) {
             top: "30%",
             left: "4%",
             width: "400px",
-            height: "400px",
+            height: "420px",
           }}
           onClose={() => props.closePopup()}
         />
@@ -24,10 +24,10 @@ export default function DesktopPopups(props: DesktopPopups) {
         <Popup
           name={"Education"}
           position={{
-            top: "18%",
+            top: "16%",
             left: "7%",
             width: "400px",
-            height: "275px",
+            height: "280px",
           }}
           onClose={() => props.closePopup()}
         />
@@ -39,7 +39,7 @@ export default function DesktopPopups(props: DesktopPopups) {
             top: "30%",
             left: "52%",
             width: "600px",
-            height: "350px",
+            height: "430px",
           }}
           onClose={() => props.closePopup()}
         />
@@ -62,7 +62,7 @@ export default function DesktopPopups(props: DesktopPopups) {
             top: "25%",
             left: "65%",
             width: "400px",
-            height: "460px",
+            height: "480px",
           }}
           name={"Projects"}
           onClose={() => props.closePopup()}

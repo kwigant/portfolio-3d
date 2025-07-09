@@ -8,31 +8,29 @@ import Link from "next/link";
 export default function Projects() {
   
   return (
-    <div>
+    <div className="page-container">
       <Header back={true} />
       {devData.map((d, i) => (
         <div
-          style={{
-            width: "100%",
-          }}
+         
           key={i}
-          className="project-list"
         >
           <h2
             style={{
-              margin: 0,
-              marginBottom: 24,
+             
+              textAlign: 'center',
+              marginBottom: 48,
+
             }}
           >
             {d.title}
           </h2>
           {d.list.map((d, i) => (
             <Link href={d.path} className="project-list-item" key={i}>
-              <Image src={d.img} width={200} height={200} alt={d.title} />
+              <Image className="project-list-img" src={d.img} width={200} height={200} alt={d.title} />
 
               <div
-                className="column hover-underline-animation"
-                style={{ marginLeft: 24 }}
+                className="column hover-underline-animation column-spacing"
               >
                 <h3>{d.title}</h3>
 

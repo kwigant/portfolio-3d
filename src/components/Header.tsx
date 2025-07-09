@@ -1,11 +1,9 @@
-import { useState } from "react";
 import "../styles/Header.scss";
 import "../styles/globals.scss";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
-import Menu from "./Menu";
 import { useHasMounted } from "@/hooks/useHasMounted";
 
 type HeaderProps = {
@@ -17,7 +15,6 @@ export default function Header(props: HeaderProps) {
   const router = useRouter();
   const { width } = useWindowDimensions();
   const isDesktop = width > 500 ? true : false;
-  const [menu, setMenu] = useState(false);
   const params = new URLSearchParams();
   const searchParams = useSearchParams();
   const hasMounted = useHasMounted()
@@ -78,10 +75,11 @@ export default function Header(props: HeaderProps) {
 
       <Link href={"/about"} className="name-container">
         <h2>Kirsten Wigant</h2>
-        <h4>Freelance Web & Mobile Developer</h4>
+        <h4>Fullstack Engineer</h4>
+        
       </Link>
 
-      {props.home && (
+      {props.home && isDesktop && (
         <button className="desk-link" onClick={() => router.push("/")}>
           <Image width={50} height={50} alt="home" src={"/icons/desk.svg"} />
         </button>
@@ -107,11 +105,7 @@ export default function Header(props: HeaderProps) {
           </h4>
         </>
       )}
-      {!isDesktop && <button className="next-link" onClick={() => setMenu(!menu)}><Image src={'/icons/menu.png'} alt={'menu'} width={24} height={24}/></button>}
-
-      {menu && (
-       <Menu onClose={()=>setMenu(false)} getTabStyle={getTabStyle} setTab={setTabByURL}/>
-      )}
+      {!isDesktop && <Link href={'/menu'} className="next-link" ><Image src={'/icons/menu.png'} alt={'menu'} width={24} height={24}/></Link>}
     </header>
   );
 }

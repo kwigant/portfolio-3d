@@ -1,18 +1,22 @@
 import Image from "next/image";
+import "@/styles/globals.scss";
 
 export default function PopupContact() {
   return (
     <>
       <h2>Let&apos;s Get in Touch</h2>
       <div className={"contact"}>
-        <Image
-          alt="portrait"
-          style={{ borderRadius: 8 }}
-          height={200}
-          width={200}
-          src={"/visuals/kw-pic.svg"}
-        />
-        <div className="contact-column" >
+        <div className="landing-img-container">
+          <Image
+            className="landing-img-mobile"
+            src="/visuals/kw-pic.svg"
+            width={200}
+            height={200}
+            alt="profile"
+          />
+        </div>
+
+        <div className="contact-column">
           <p className="subtitle">
             I&apos;m currently available for freelance work!
           </p>
