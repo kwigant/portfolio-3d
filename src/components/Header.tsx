@@ -3,8 +3,6 @@ import "../styles/globals.scss";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import useWindowDimensions from "@/hooks/useWindowDimensions";
-import { useHasMounted } from "@/hooks/useHasMounted";
 
 type HeaderProps = {
   back: boolean;
@@ -13,30 +11,31 @@ type HeaderProps = {
 
 export default function Header(props: HeaderProps) {
   const router = useRouter();
-  const { width } = useWindowDimensions();
-  const isDesktop = width > 500 ? true : false;
   const params = new URLSearchParams();
   const searchParams = useSearchParams();
-  const hasMounted = useHasMounted()
+
   function setTabByURL(tab: string) {
     params.set("tab", tab);
     router.push(`/?${params.toString()}`);
   }
 
   function getTabStyle(idx: string) {
-    if (searchParams?.get("tab") === idx || searchParams?.get("tab") === idx.toUpperCase()) return "link-active";
+    if (
+      searchParams?.get("tab") === idx ||
+      searchParams?.get("tab") === idx.toUpperCase()
+    )
+      return "link-active";
     else return "link";
   }
-  if (!hasMounted) return null; 
 
   return (
     <header
       style={{
-        justifyContent: props.back ? isDesktop ?"center" : "space-between" : "space-evenly",
+        justifyContent: props.back ? "center" : "space-evenly",
         alignItems: "center",
       }}
     >
-      {isDesktop && !props.back && (
+      {!props.back && (
         <>
           <h4
             onClick={() => setTabByURL("career")}
@@ -57,18 +56,13 @@ export default function Header(props: HeaderProps) {
         </>
       )}
 
-      {props.back  && (
-        <button
-          className="back-link"
-          onClick={() => router.back()}
-        >
+      {props.back && (
+        <button className="back-link" onClick={() => router.back()}>
           <Image
             width={18}
             height={18}
             alt="back"
-            src={
-              '/icons/chevron-left.png'
-            }
+            src={"/icons/chevron-left.png"}
           />
         </button>
       )}
@@ -76,16 +70,15 @@ export default function Header(props: HeaderProps) {
       <Link href={"/about"} className="name-container">
         <h2>Kirsten Wigant</h2>
         <h4>Fullstack Engineer</h4>
-        
       </Link>
 
-      {props.home && isDesktop && (
+      {props.home && (
         <button className="desk-link" onClick={() => router.push("/")}>
           <Image width={50} height={50} alt="home" src={"/icons/desk.svg"} />
         </button>
       )}
 
-      {isDesktop && !props.back && (
+      {!props.back && (
         <>
           <h4
             onClick={() => setTabByURL("contact")}
@@ -105,7 +98,6 @@ export default function Header(props: HeaderProps) {
           </h4>
         </>
       )}
-      {!isDesktop && <Link href={'/menu'} className="next-link" ><Image src={'/icons/menu.png'} alt={'menu'} width={24} height={24}/></Link>}
     </header>
   );
 }

@@ -39,7 +39,7 @@ export default function DesktopPopups(props: DesktopPopups) {
             top: "30%",
             left: "52%",
             width: "600px",
-            height: "430px",
+            height: "400px",
           }}
           onClose={() => props.closePopup()}
         />
@@ -48,7 +48,7 @@ export default function DesktopPopups(props: DesktopPopups) {
         <Popup
           name={"Contact"}
           position={{
-            top: "60%",
+            top: "63%",
             left: "20%",
             width: "850px",
             height: "250px",

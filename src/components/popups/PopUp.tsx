@@ -44,15 +44,15 @@ export default function Popup({ name, position, onClose }: PopupProps) {
   const getAnimationClass = () => {
     switch (position.width) {
       case "400px":
-        if (position.height === "280px") return "popup-250-h";
-        if (position.height === "320px") return "popup-400-r";
-        if (position.height === "480px") return "popup-400-r";
+        if (position.height === "280px") return "popup-250-h"; // education
+        if (position.height === "320px") return "popup-400-r"; // tech
+        if (position.height === "480px") return "popup-400-r"; // projects
 
-        return "popup-400-l";
+        return "popup-400-l"; // career
       case "850px":
-        return "popup-850";
+        return "popup-850"; // contact
       case "600px":
-        return "popup-500";
+        return "popup-500"; // tech
     }
   };
 

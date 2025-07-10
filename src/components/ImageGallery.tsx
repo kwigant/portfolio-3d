@@ -38,28 +38,25 @@ export default function ImageGallery(props: PropsGallery) {
 
   return (
     <div>
-      <div className="justified-row">
+      <div className="justified-row" style={{marginBottom: 24}}>
+        <button className="btn" onClick={leftClick}>
+          <Image
+            src={"/icons/chevron-left.png"}
+            alt="left"
+            width={18}
+            height={18}
+          />
+        </button>
         <h3 style={{ marginTop: 24 }}>{props.images[currentIdx].title}</h3>
-
-        <div className="row">
-          <button className="btn" onClick={leftClick}>
-            <Image
-              src={"/icons/chevron-left.png"}
-              alt="left"
-              width={24}
-              height={24}
-            />
-          </button>
-          <button className="btn" onClick={rightClick}>
-            <Image
-              style={{ rotate: "180deg" }}
-              src={"/icons/chevron-left.png"}
-              alt="left"
-              width={24}
-              height={24}
-            />
-          </button>
-        </div>
+        <button className="btn" onClick={rightClick}>
+          <Image
+            style={{ rotate: "180deg" }}
+            src={"/icons/chevron-left.png"}
+            alt="left"
+            width={18}
+            height={18}
+          />
+        </button>
       </div>
       <p style={{ marginTop: 12 }}>{props.images[currentIdx].description}</p>
 

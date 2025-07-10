@@ -21,16 +21,17 @@
   ];
  
   export const tech = [
-    {title: 'React + React Native', img: '/tech/react.svg'},
+    {title: 'React', img: '/tech/react.svg'},
     {title: 'Angular', img: '/tech/angular.svg'},
+    {title: 'React Native', img: '/tech/react.svg'},
     {title: 'Supabase', img: '/tech/supabase.svg'},
     {title: 'GraphQL', img: '/tech/graphql.svg'},
-     {title: 'PostgresQL', img: '/tech/postgresql.svg'},
-    {title: 'Node.js + Express', img: '/tech/nodejs.svg'},
+    {title: 'PostgresQL', img: '/tech/postgresql.svg'},
+    {title: 'Node.js', img: '/tech/nodejs.svg'},
+    {title: 'TensorFlow.js', img: '/tech/tensorflow.svg'},
     {title: 'JavaScript', img: '/tech/javascript.svg'},
     {title: 'TypeScript', img: '/tech/typescript.svg'},
-    {title: 'TensorFlow.js', img: '/tech/tensorflow.svg'},
-     {title: 'Three.js', img: '/tech/threejs.svg'},
+    {title: 'Three.js', img: '/tech/threejs.svg'},
     {title: 'Adobe Illustrator', img: '/tech/adobe.svg'},
     {title: 'Figma', img: '/tech/figma.svg'},
     {title: 'Blender', img: '/tech/blender.svg'},
@@ -43,7 +44,7 @@ export const projects = [
       src: "/visuals/portfolio-3d.svg",
       alt: "3d-portfolio",
       title: "My Portfolio",
-      description: "My responsive React Three.js Web App that lets the world know about me :)",
+      description: "This responsive website created by me to show off my work",
       path: "/projects/portfolio",
       date: "May 2025 - June 2025"
     },
@@ -52,7 +53,7 @@ export const projects = [
       src: "/visuals/tarot-ai.svg",
       alt: "tarot-ai",
       title: "Tarot AI",
-      description: "An image detection app that determines the type of tarot card pictured",
+      description: "An app that uses AI to identify any tarot card",
       path: "/projects/tarot-ai",
       date: "February 2025 - April 2025"
     },
@@ -60,7 +61,7 @@ export const projects = [
       src: "/visuals/zen-tank.svg",
       alt: "zen-tank",
       title: "Zen Tank",
-      description: "A React Native app to plan your next Fish Tank Ecosystem!",
+      description: "An app to help plan and visualize a healthy aquarium",
       path: "/projects/zen-tank",
       date: "November 2024 - February 2025"
     },

@@ -237,12 +237,10 @@ export const allProjectData: projectData[] = [
     description:
       "An internal site intended to monitor of the various changes and updates within CX / PX Cloud. Powered by our own Content Management System (CMS) and Data Asset Management System (DAM), allowing designers and other admins to update XDStudio (and eventually other sites) as they see fit.",
     projectDetails: {
-      deliverables: ["With a small team of 3, the goal was to:"],
-      subDeliverables: [
-        "Build a scalable CMS with React and AWS allowing for the creation and maintenance of internal sites.",
+      deliverables: [ "Build a scalable CMS with React and AWS allowing for the creation and maintenance of internal sites.",
         "Build a scalable Data Asset Management System which handles the storage of any media for the sites built using the CMS.",
-        "Using the CMS and DAM, create an internal blog site, based on given design specs, to keep track of updates on the customer and partner portals.",
-      ],
+        "Using the CMS and DAM, create an internal blog site, based on given design specs, to keep track of updates on the customer and partner portals.",],
+     
       date: "January 2022 - December 2023",
       role: "UX Engineer; XDI Team Member",
       techStack: ["React", "TypeScript", "AWS", "REST APIs"],

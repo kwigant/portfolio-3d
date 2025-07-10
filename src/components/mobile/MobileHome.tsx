@@ -29,12 +29,12 @@ export default function MobileHome() {
           alt="profile"
         />
       </div>
-      <h1 style={{ marginBottom: 0 }}>Hello, I&apos;m Kirsten!</h1>
+      <h1 style={{ marginTop: 32,marginBottom: 0 }}>Hello, I&apos;m Kirsten!</h1>
       <p style={{ textAlign: "center", margin: 0 }}>
         I&apos;m a freelance Mobile and Web Developer, specializing in:
       </p>
       <TitleCycle />
-      <div style={{ marginTop: "32px" }}>
+      <div>
         <p className={"small-text"} style={{ margin: 0, textAlign: "center" }}>
           Check out my Work:
         </p>

@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import MobileHeader from "@/components/mobile/MobileHeader";
 import "@/styles/contact.scss";
 import Image from "next/image";
 
@@ -6,7 +6,7 @@ export default function Contact() {
 
   return (
     <div className="contact">
-      <Header back={true} />
+      <MobileHeader />
       <>
            <div className={"contact"}>
              <div className="contact-img">
@@ -32,18 +32,18 @@ export default function Contact() {
                <div className="contact-row">
                  <div className="row">
                    <Image
-                     src={"/icons/linkedin.png"}
-                     width={40}
-                     height={40}
+                     src={"/icons/linkedin.svg"}
+                     width={24}
+                     height={24}
                      alt={"linkedin"}
                    />
                    <p style={{ marginLeft: 8, marginRight: 24 }}>LinkedIn</p>
                  </div>
                  <div className="row">
                    <Image
-                     src={"/icons/email.png"}
-                     width={40}
-                     height={40}
+                     src={"/icons/email.svg"}
+                     width={24}
+                     height={24}
                      alt={"email"}
                    />
                    <p style={{ marginLeft: 8 }}>kirsten.wigant@gmail.com</p>

@@ -9,7 +9,7 @@ export default function MobileCanvasModel() {
     <Canvas
       shadows={true}
       className="canvas"
-      style={{height: 280, marginBottom: 32 }}
+      style={{height: 250, marginBottom: 48 }}
     >
       <hemisphereLight args={["#CB9FCD", "#3529A9", 4]} />
       <pointLight

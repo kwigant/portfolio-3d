@@ -21,7 +21,7 @@ li {
   margin-bottom: 32px;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .clickable-li {
@@ -35,17 +35,17 @@ li {
 .degree {
   margin: 0;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .school {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .date {
   margin: 4px 0;
-  font-size: 14px;
+  font-size: 16px;
   font-style: italic;
   font-weight: 100;
   color: globals.$secondary-color;

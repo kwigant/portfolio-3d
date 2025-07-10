@@ -10,8 +10,8 @@ export default function PopupContact() {
           <Image
             className="landing-img-mobile"
             src="/visuals/kw-pic.svg"
-            width={200}
-            height={200}
+            width={170}
+            height={170}
             alt="profile"
           />
         </div>
@@ -28,18 +28,18 @@ export default function PopupContact() {
           <div className="contact-row">
             <div className="row">
               <Image
-                src={"/icons/linkedin.png"}
-                width={40}
-                height={40}
+                src={"/icons/linkedin.svg"}
+                width={24}
+                height={24}
                 alt={"linkedin"}
               />
               <p style={{ marginLeft: 8, marginRight: 24 }}>LinkedIn</p>
             </div>
             <div className="row">
               <Image
-                src={"/icons/email.png"}
-                width={40}
-                height={40}
+                src={"/icons/email.svg"}
+                width={24}
+                height={24}
                 alt={"email"}
               />
               <p style={{ marginLeft: 8 }}>kirsten.wigant@gmail.com</p>

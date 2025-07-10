@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutList() {
   return (
-    <div className="centered-column">
+    <div className="centered-column" style={{marginTop: 48}}>
       {abtData.map((a, i) => (
         <>
           <div className="abt-row" key={i}>

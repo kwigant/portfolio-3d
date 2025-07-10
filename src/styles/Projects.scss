@@ -5,7 +5,7 @@ h3 {
 }
 
 h2 {
- @extend h2;
+  @extend h2;
 }
 
 .layout {
@@ -14,10 +14,10 @@ h2 {
   font-family: "Funnel Display", sans-serif;
 
   aside {
-    width: 300px;
+    width: 330px;
     padding: 0 48px 100px 48px;
     position: sticky;
-
+    letter-spacing: 0.1rem;
     border-right: 2px solid rgb(216, 216, 216);
 
     ul {
@@ -52,6 +52,7 @@ h2 {
 
     p {
       color: globals.$body-color;
+      line-height: 1.7rem;
     }
   }
 }
@@ -81,14 +82,13 @@ h2 {
   display: grid;
   grid-template-columns: 225px 1fr;
   width: 100%;
-  margin-top: 60px;
-  margin-bottom: 60px;
 }
 
 .projects-row {
   @extend .row;
 
-  margin-top: 18px;
+  margin-top: 12px;
+  text-transform: uppercase;
 }
 
 .projects-column {
@@ -140,6 +140,10 @@ h2 {
   margin-left: 24px;
 }
 
+.parse-container {
+  @extend p;
+}
+
 .text-column {
   width: 100%;
   padding: 24px;
@@ -178,8 +182,11 @@ h2 {
 .header-row {
   @extend .row;
 
-  margin-top: 24;
   align-items: flex-end;
+
+  h2 {
+    margin: 0 !important;
+  }
 }
 
 .project-list-item {
@@ -202,7 +209,21 @@ h2 {
   margin-top: 48px;
 }
 
+.centered {
+  text-align: left;
+}
+
+.special-divide {
+  display: none;
+  visibility: hidden;
+}
+
 @media (max-width: 500px) {
+  .divider {
+    margin-top: 12px;
+  }
+
+ 
   .layout {
     flex-direction: column;
     aside {
@@ -238,8 +259,6 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 48px;
-    margin-bottom: 48px;
   }
 
   .projects-row {
@@ -306,7 +325,16 @@ h2 {
     margin-left: 0;
   }
 
-  h3, h2 {
+  h3,
+  h2 {
+    text-align: center;
+  }
+
+  .special-divide {
+    display: flex;
+    visibility: visible;
+  }
+  .centered {
     text-align: center;
   }
 }

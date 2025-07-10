@@ -1,10 +1,15 @@
 import "@/styles/Header.scss";
+import "@/styles/globals.scss";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { tabs } from "@/components/mobile/MobileHome";
 import Link from "next/link";
 
-export default function Menu() {
+type MenuProps = {
+    onClose: () => void;
+}
+
+export default function Menu(props: MenuProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -16,9 +21,15 @@ export default function Menu() {
       return "link-active";
     else return "link";
   }
+
+  function clickLink(t: string) {
+    router.push(t)
+    props.onClose()
+  }
+
   return (
     <div className="menu">
-      <div className="menu-close" onClick={() => router.back()}>
+      <div className="menu-close" onClick={() => props.onClose()}>
         x
       </div>
       <Link href={"/about"} className="name-container">
@@ -37,15 +48,15 @@ export default function Menu() {
       >
         {tabs.map((t, i) => {
           return (
-            <Link
+            <button
               key={i}
-              href={t.path}
+              onClick={()=> clickLink(t.path)}
               className={`${getTabStyle(
                 t.title
-              )} hover-underline-animation left`}
+              )} hover-underline-animation left next-link`}
             >
               {t.title}
-            </Link>
+            </button>
           );
         })}
       </div>

@@ -34,7 +34,7 @@ export default function PopupList(props: PopupListProps) {
                   alt={l.alt}
                 />
                 <div className="column hover-underline-animation">
-                  <p className="degree">{l.title}</p>
+                  <div className="degree">{l.title}</div>
                   <p className="school">{l.description}</p>
                   <p className="date">{l.date}</p>
                 </div>
@@ -50,7 +50,7 @@ export default function PopupList(props: PopupListProps) {
                 alt={l.alt}
               />
               <div className="column">
-                <p className="degree">{l.title}</p>
+                <div className="degree">{l.title}</div>
                 <p className="school">{l.description}</p>
                 <p className="date">{l.date}</p>
               </div>
@@ -60,7 +60,7 @@ export default function PopupList(props: PopupListProps) {
       </ul>
       {props.clickable && (
         <Link
-          style={{ textDecoration: "none" }}
+          style={{ textDecoration: "none", marginTop: -10 }}
           href={"/projects"}
           className="secondary-btn"
         >
